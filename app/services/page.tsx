@@ -100,7 +100,7 @@ const ButtonGroup:React.FC<SectionProps> = ({ buttonText1, link1 }) => (
 const TextSection:React.FC<SectionProps> = ({ title, description }) => (
   <div>
     <h1 className='font-bold text-[#11142D] dark:text-white md:text-[20px] lg:text-[26px]'>{title}</h1>
-    <p className='font-medium font-sans xs:text-[14px] md:text-[16px] text-[#222] dark:text-[#eee] lg:w-[90%]'>{description}</p>
+    <p className='font-Roboto xs:text-[14px] md:text-[16px] text-[#222] dark:text-[#eee] lg:w-[90%]'>{description}</p>
   </div>
 );
 
@@ -152,9 +152,9 @@ const Services = () => {
               viewport={{ once: true }}
               className='lg:w-1/2'
             >
-              <p className='font-bold sm:text-[20px] xs:text-[16px] text-[#11142D] dark:text-white'>Empower</p>
+              <p className='font-bold md:text-[20px] xs:text-[16px] text-[#11142D] dark:text-white'>Empower</p>
               <h1 className='font-bold text-[#2F4F4F] dark:text-white xs:text-[15px] sm:text-[20px] lg:text-[46px] md:text-[26px] xl:w-[70%]'>{section.title}</h1>
-              <p className='font-medium font-sans xs:text-[14px] md:text-[16px] text-[#222] dark:text-[#eee] md:my-5 xs:my-3'>{section.description}</p>
+              <p className='font-Roboto xs:text-[14px] md:text-[16px] text-[#222] dark:text-[#eee] md:my-5 xs:mb-3'>{section.description}</p>
               <div className='flex flex-col gap-y-5'>
                 <TextSection
                   title="My Promise"
@@ -186,7 +186,7 @@ const Services = () => {
       <h1 className='font-bold text-[#2F4F4F] dark:text-white sm:text-[25px] xs:text-[20px] lg:text-[46px] md:text-[26px] text-center xs:mt-10 lg:mt-32 mb-5'>WRITING SERVICES</h1>
       <div className='flex flex-col gap-y-20'>
         {sectionsWriting.map((section, index) => (
-          <div key={index} className={`flex ${section.position === "right" ? "flex-row" : "flex-row-reverse"} gap-x-20 gap-y-5 xs:flex-wrap-reverse lg:flex-nowrap lg:px-10 xl:px-20 md:px-10 xs:px-5`}>
+          <div key={index} className={`flex ${section.position === "right" ? "flex-row" : "flex-row-reverse"} gap-x-20 gap-y-5 overflow-hidden xs:flex-wrap-reverse lg:flex-nowrap lg:px-10 xl:px-20 md:px-10 xs:px-2`}>
             <motion.div
               variants={fadeInVariant}
               initial="hidden"
@@ -194,9 +194,9 @@ const Services = () => {
               viewport={{ once: true }}
               className='lg:w-1/2'
             >
-              <p className='font-bold text-[20px] text-[#11142D] dark:text-white'>Empower</p>
-              <h1 className='font-bold text-[#2F4F4F] dark:text-white xs:text-[15px] sm:text-[20px] lg:text-[46px] md:text-[26px] xl:w-[70%]'>{section.title}</h1>
-              <p className='font-medium font-sans xs:text-[14px] md:text-[16px] text-[#222] dark:text-[#eee] md:my-5 xs:my-3'>{section.description}</p>
+              <p className='font-bold md:text-[20px] text-[#11142D] dark:text-white'>Empower</p>
+              <h1 className='font-bold text-[#2F4F4F] dark:text-white xs:text-[20px] sm:text-[25px] lg:text-[46px] md:text-[26px] xl:w-[70%]'>{section.title}</h1>
+              <p className='font-Roboto xs:text-[14px] md:text-[16px] text-[#222] dark:text-[#eee] md:my-5 xs:mb-3'>{section.description}</p>
               <div className='flex flex-col gap-y-5'>
                 <TextSection
                   title="My Promise"
@@ -228,7 +228,7 @@ const Services = () => {
       <h1 className='font-bold text-[#2F4F4F] dark:text-white sm:text-[25px] xs:text-[20px] lg:text-[46px] md:text-[26px] text-center xs:mt-10 lg:mt-32 mb-5'>content creation (hobby?)</h1>
       <div className='flex flex-col gap-y-20 pb-20'>
         {sectionsContent.map((section, index) => (
-          <div key={index} className={`flex ${section.position === "right" ? "flex-row" : "flex-row-reverse"} gap-x-20 gap-y-5 xs:flex-wrap-reverse lg:flex-nowrap lg:px-10 xl:px-20 md:px-10 xs:px-5`}>
+          <div key={index} className={`flex ${section.position === "right" ? "flex-row" : "flex-row-reverse"} gap-x-20 gap-y-5 overflow-hidden xs:flex-wrap-reverse lg:flex-nowrap lg:px-10 xl:px-20 md:px-10 xs:px-2`}>
             <motion.div
               variants={fadeInVariantLeft}
               initial="hidden"
@@ -236,9 +236,9 @@ const Services = () => {
               viewport={{ once: true }}
               className='lg:w-1/2'
             >
-              <p className='font-bold text-[20px] text-[#11142D] dark:text-white'>Empower</p>
+              <p className='font-bold md:text-[20px] text-[#11142D] dark:text-white'>Empower</p>
               <h1 className='font-bold text-[#2F4F4F] dark:text-white xs:text-[15px] sm:text-[20px] lg:text-[46px] md:text-[26px] xl:w-[70%]'>{section.title}</h1>
-              <p className='font-medium font-sans xs:text-[14px] md:text-[16px] text-[#222] dark:text-[#eee] md:my-5 xs:my-3'>{section.description}</p>
+              <p className='font-Roboto xs:text-[14px] md:text-[16px] text-[#222] dark:text-[#eee] md:my-5 xs:mb-3'>{section.description}</p>
               <div className='flex flex-col gap-y-5'>
                 <TextSection
                   title="My Promise"

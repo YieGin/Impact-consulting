@@ -80,13 +80,13 @@ const Touch: React.FC = () => {
           <div className='flex flex-col gap-y-1'>
             <label htmlFor="firstName" className='font-semibold md:text-[16px] xs:text-[14px] text-[#11142D] dark:text-[#eee]'>First name</label>
             <input id="firstName" name="firstName" type="text" value={formData.firstName} onChange={handleInputChange} placeholder='First name' className='lg:w-[400px] h-[50px] border-2 px-2' />
-            {errors.firstName && <p className='text-red-500'>{errors.firstName}</p>}
+            {errors.firstName && <p className='text-red-500 xs:text-[14px] md:text-[16px]'>{errors.firstName}</p>}
           </div>
           {/* Last Name */}
           <div className='flex flex-col gap-y-1'>
             <label htmlFor="lastName" className='font-semibold md:text-[16px] xs:text-[14px] text-[#11142D] dark:text-[#eee]'>Last name</label>
             <input id="lastName" name="lastName" type="text" value={formData.lastName} onChange={handleInputChange} placeholder='Last name' className='lg:w-[400px] h-[50px] border-2 px-2' />
-            {errors.lastName && <p className='text-red-500'>{errors.lastName}</p>}
+            {errors.lastName && <p className='text-red-500 xs:text-[14px] md:text-[16px]'>{errors.lastName}</p>}
           </div>
         </div>
         {/* Email and phone number inputs */}
@@ -95,13 +95,13 @@ const Touch: React.FC = () => {
           <div className='flex flex-col gap-y-1'>
             <label htmlFor="email" className='font-semibold md:text-[16px] xs:text-[14px] text-[#11142D] dark:text-[#eee]'>Email</label>
             <input id="email" name="email" type="email" value={formData.email} onChange={handleInputChange} placeholder='Email' className='lg:w-[400px] h-[50px] border-2 px-2' />
-            {errors.email && <p className='text-red-500'>{errors.email}</p>}
+            {errors.email && <p className='text-red-500 xs:text-[14px] md:text-[16px]'>{errors.email}</p>}
           </div>
           {/* Phone Number */}
           <div className='flex flex-col gap-y-1'>
             <label htmlFor="phoneNumber" className='font-semibold md:text-[16px] xs:text-[14px] text-[#11142D] dark:text-[#eee]'>Phone number</label>
             <input id="phoneNumber" name="phoneNumber" type="tel" value={formData.phoneNumber} onChange={handleInputChange} placeholder='Phone number' className='lg:w-[400px] h-[50px] border-2 px-2' />
-            {errors.phoneNumber && <p className='text-red-500'>{errors.phoneNumber}</p>}
+            {errors.phoneNumber && <p className='text-red-500 xs:text-[14px] md:text-[16px]'>{errors.phoneNumber}</p>}
           </div>
         </div>
         {/* Product selection */}
@@ -118,7 +118,7 @@ const Touch: React.FC = () => {
             <option value="environmental_conservation">Environmental Conservation</option>
             <option value="emergency_relief">Emergency Relief Efforts</option>
           </select>
-          {errors.selectedProduct && <p className='text-red-500'>{errors.selectedProduct}</p>}
+          {errors.selectedProduct && <p className='text-red-500 xs:text-[14px] md:text-[16px]'>{errors.selectedProduct}</p>}
         </div>
         {/* Terms acceptance */}
         <div className='flex items-center mt-5 justify-between'>
@@ -132,7 +132,7 @@ const Touch: React.FC = () => {
               <label className='font-semibold md:text-[17px] xs:text-[14px] font-sans dark:text-[#eee]'>
                 I accept the <Link href="/terms-and-Conditions" className='text-teal-600 underline cursor-pointer'>Terms</Link>
               </label>
-              {errors.selectedTerms && <p className='text-red-500'>{errors.selectedTerms}</p>}
+              {errors.selectedTerms && <p className='text-red-500 xs:text-[14px] md:text-[16px]'>{errors.selectedTerms}</p>}
             </div>
           </div>
           {/* Submit Button */}

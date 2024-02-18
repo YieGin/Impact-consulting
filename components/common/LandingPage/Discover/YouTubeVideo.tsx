@@ -24,7 +24,7 @@ const YouTubeVideo:React.FC<SectionProps> = ({ videoId, placeholder }) => {
           <div className="flex items-center justify-center relative">
             <Image 
               src={placeholder} 
-              className="w-full md:h-[400px] object-cover" 
+              className="w-full h-[400px] object-cover" 
               alt="Video Placeholder"
             />
             <FaYoutube onClick={handleClick} className="text-red-600 absolute md:text-[60px] xs:text-[30px] sm:text-[40px] cursor-pointer" />
@@ -33,7 +33,7 @@ const YouTubeVideo:React.FC<SectionProps> = ({ videoId, placeholder }) => {
   
         {showVideo && (
           <iframe
-            className="w-full h-[700px]"
+            className="w-full h-[400px] object-cover"
             src={videoUrl}
             title="YouTube video player"
             frameBorder="0"

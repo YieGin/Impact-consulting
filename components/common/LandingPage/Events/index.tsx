@@ -85,7 +85,7 @@ const Events = () => {
           <Link href={'/services'} className='button-learn px-4 py-2 text-[18px] dark:text-white'>Learn More</Link>
         </div>
       </div>
-      <div className='mt-40 flex flex-col items-center justify-center gap-y-7 dark:bg-[#11161b] py-10'>
+      <div className='md:mt-40 xs:mt-10 flex flex-col items-center justify-center gap-y-7 dark:bg-[#11161b] py-10'>
         <Link href="/">
           {theme === "dark" ? (
             <Image className='sm:w-[150px] xs:w-[100px]' src={LogoBlack} alt="Logo" width={150} height={150} />

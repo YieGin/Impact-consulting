@@ -6,7 +6,6 @@ import Link from 'next/link'
 import React from 'react'
 import { BiSolidDonateHeart } from 'react-icons/bi'
 import { IoIosArrowForward } from 'react-icons/io'
-import { motion } from 'framer-motion';
 
 const Page = () => {
   const DonateList = [
@@ -66,15 +65,6 @@ const Page = () => {
     },
   ]
 
-  const getCardVariants = (index: number) => ({
-    offscreen: { opacity: 0, y: 50 },
-    onscreen: {
-      opacity: 1,
-      y: 0,
-      transition: { delay: index * 0.3, duration: 0.5 }
-    }
-  });
-
   return (
     <div className='bg-[#F5F5F5] font-Cairo dark:bg-[#11161b]'>
       <div className='w-full md:h-[700px] xs:h-[500px]'>
@@ -109,12 +99,7 @@ const Page = () => {
       </div>
       <div className='flex flex-wrap gap-x-5 lg:px-20 md:px-10 pb-20 dark:bg-[#181c20]'>
         {DonateList.map((item, index) => (
-          <motion.div 
-            variants={getCardVariants(index)}
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: index * 0.2 }}
+          <div 
             key={index}   
             className='shadow-md relative xs:w-full lg:w-[470px] md:w-[320px] lg-md:w-[420px] xl:w-[570px] flex flex-col gap-y-5 mt-10 dark:border-[1px] dark:border-[#666] h-full'>
             <Link target='_blank' href={item.href} className='overflow-hidden w-full h-[300px] relative'>
@@ -125,16 +110,16 @@ const Page = () => {
               <p className='md:text-[16px] xs:text-[14px] font-sans text-[#222] dark:text-[#eee] line-clamp-4'>{item.description}</p>
               <div className='flex justify-between mt-auto'>
                 <Link target='_blank' href={item.href} className='read_button'>
-                  <p>Read more</p>
+                  <p className='dark:text-[#fff]'>Read more</p>
                   <IoIosArrowForward className='font-bold text-[18px]' />
                 </Link>
                 <Link href={'/contact'} className='hire_button'>
-                  <p>Hire me</p>
-                  <IoIosArrowForward className='font-bold text-[18px]' />
+                  <p className='dark:text-[#fff]'>Hire me</p>
+                  <IoIosArrowForward className='font-bold text-[18px] dark:text-[#fff]' />
                 </Link>
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
       <Faq />

@@ -10,7 +10,11 @@ interface CategoryLink {
   href: string;
 }
 
-const Menu: React.FC = () => {
+interface MenuProps {
+  closeMenu: () => void;
+}
+
+const Menu: React.FC<MenuProps> = ({ closeMenu }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const bookCategories: CategoryLink[] = [
@@ -33,7 +37,7 @@ const Menu: React.FC = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="absolute left-[-70px] mt-10 py-2 bg-white dark:bg-[#11161b] rounded-md shadow-xl z-50"
+          className="absolute left-[-70px] md:mt-10 xs:mt-5 py-2 bg-white dark:bg-[#11161b] rounded-md shadow-xl z-50"
           style={{ width: 'max-content' }}
         >
           <>
@@ -43,6 +47,7 @@ const Menu: React.FC = () => {
                   <Link
                     key={index} 
                     href={category.href}
+                    onClick={closeMenu}
                     className="px-10 py-3 text-sm text-gray-700 font-semibold dark:text-white hover:bg-gray-100 dark:hover:bg-gray-900"
                   >
                     {category.name}
@@ -55,6 +60,7 @@ const Menu: React.FC = () => {
                   <Link 
                     key={index} 
                     href={category.href}
+                    onClick={closeMenu}
                     className="px-10 py-3 text-sm text-gray-700 dark:text-white font-semibold hover:bg-gray-100 dark:hover:bg-gray-900"
                   >
                     {category.name}

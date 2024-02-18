@@ -28,7 +28,7 @@ const Discover = () => {
 
   return (
     <div className='font-Cairo lg:px-20 md:px-10 xs:px-5'>
-      <div className='flex items-center flex-col justify-center my-20'>
+      <div className='flex items-center flex-col justify-center md:my-20 xs:my-5'>
         <p className='font-bold text-[20px] text-[#11142D] dark:text-[#eee]'>Latest</p>
         <h1 className='font-bold text-[#2F4F4F] dark:text-white md:text-[46px] sm:text-[26px] xs:text-[20px]'>Discover Inspiring Blog Stories</h1>
         <p className='font-semibold md:text-[20px] xs:text-[14px] text-[#11142D] dark:text-[#eee]'>Stay updated with our latest blog entries.</p>
@@ -38,10 +38,10 @@ const Discover = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className='flex xs:flex-wrap lg:flex-nowrap gap-y-20 gap-x-5'
+        className='flex xs:flex-wrap lg:flex-nowrap md:gap-y-20 xs:gap-y-10 gap-x-5'
       >
         <motion.div
-          className='lg:w-1/2 flex flex-col md:gap-y-5 xs:gap-y-2 shadow-md p-5' variants={itemVariants}>
+          className='xs:w-full lg:w-1/2 flex flex-col md:gap-y-5 xs:gap-y-2 shadow-md dark:border-[1px] dark:border-[#666] dark:shadow-none xs:p-3 md:p-5' variants={itemVariants}>
           <YouTubeVideo
             videoId="TH4V-yHbJXk" 
             placeholder={Image3}
@@ -64,7 +64,7 @@ const Discover = () => {
             <IoIosArrowForward />
           </div>
         </motion.div>
-        <motion.div className='lg:w-1/2 flex flex-col md:gap-y-5 xs:gap-y-2 p-5 shadow-md' variants={itemVariants}>
+        <motion.div className='lg:w-1/2 flex flex-col md:gap-y-5 xs:gap-y-2 xs:p-3 md:p-5 shadow-md dark:border-[1px] dark:border-[#666] dark:shadow-none' variants={itemVariants}>
         <YouTubeVideo
           videoId="TH4V-yHbJXk" 
           placeholder={Image6}

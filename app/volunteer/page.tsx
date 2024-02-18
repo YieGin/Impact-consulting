@@ -90,11 +90,11 @@ const Volunteer = () => {
           </div>
         </div>
       </div>
-      <div className='flex gap-x-20 gap-y-5 xs:flex-wrap lg:flex-nowrap lg:px-20 md:px-10 xs:px-5 pt-20 pb-10 bg-white dark:bg-[#11161b]'>
+      <div className='flex gap-x-20 gap-y-5 xs:flex-wrap lg:flex-nowrap lg:px-20 md:px-10 xs:px-5 xs:pt-10 md:pt-20 pb-10 bg-white dark:bg-[#11161b]'>
         <div className='lg:w-1/2'>
           <p className='font-bold text-[20px] text-[#11142D] dark:text-white'>Empower</p>
           <h1 className='font-bold text-[#2F4F4F] dark:text-white xs:text-[18px] lg:text-[46px] md:text-[26px] xl:w-[70%]'>Make a Difference in Africa&lsquo;s Future</h1>
-          <p className='font-semibold md:text-[16px] xs:text-[13px] text-[#464B70] dark:text-[#c5c5c5] my-5'>
+          <p className='font-semibold md:text-[16px] xs:text-[13px] text-[#464B70] dark:text-[#c5c5c5] xs:pb-5 md:my-5'>
             Volunteering with our organization not only benefits the children in Africa who need help, but also provides personal fulfillment
             and contributes to the betterment of the community. Join us in making a positive impact today!
           </p>
@@ -122,7 +122,7 @@ const Volunteer = () => {
           </h1>
         </div>
       </div>
-      <div className='flex gap-x-20 xs:flex-wrap lg:flex-nowrap lg:px-20 md:px-10 xs:px-5 mt-20'>
+      <div className='flex gap-x-20 xs:flex-wrap lg:flex-nowrap lg:px-20 md:px-10 xs:px-5 xs:mt-10 md:mt-20'>
         <div className='lg:w-1/2'>
           <h1 className='font-bold text-[#2F4F4F] dark:text-white xs:text-[18px] lg:text-[36px] md:text-[26px] xl:w-[70%]'>
             Join Our Volunteer Program and Make a Difference in Africa
@@ -144,7 +144,7 @@ const Volunteer = () => {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ delay: index * 0.2 }}
             key={index}  
-          className='shadow-md relative xs:w-full lg:w-[350px] xl:w-[570px] flex flex-col p-5 gap-y-5 mt-10 dark:border-[1px] dark:border-[#666] h-full'>
+          className='shadow-md relative xs:w-full lg:w-[350px] xl:w-[570px] flex flex-col p-5 gap-y-5 md:mt-10 dark:border-[1px] dark:border-[#666] h-full'>
             <Image className='w-full h-[300px] object-cover' width={4000} height={3000} src={item.Image} alt={`event image ${index}`} />
             <div className='flex flex-col gap-y-5 pb-5'>
               <h1 className='font-bold text-[#2F4F4F] dark:text-white md:text-[20px] xl:text-[26px]'>{item.title}</h1>

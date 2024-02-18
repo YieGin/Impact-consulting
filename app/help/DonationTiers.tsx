@@ -1,44 +1,15 @@
-import { loadStripe } from '@stripe/stripe-js';
-import axios from 'axios';
+import Link from 'next/link';
 import React from 'react';
 import { FcCheckmark } from 'react-icons/fc';
 import { MdOutlinePayments } from 'react-icons/md';
-import { toast } from 'react-toastify';
 
 const DonationTiers = () => {
-  const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY || '');
   const benefits = [
     { id: 1, title: "Supports education initiatives" },
     { id: 2, title: "Provides healthcare services" },
     { id: 3, title: "Supplies clean drinking water" },
     { id: 4, title: "Supports nutrition programs" },
   ];
-
-  const handleDonateClick = async () => {
-    const stripe = await stripePromise;
-    try {
-      const planName = "Diana";
-      const amount = 15;
-      const response = await axios.post('http://localhost:8000/users/create-checkout-session/', {
-        planName,
-        amount,
-      }, {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      const sessionId = response.data.id;
-      if (stripe) {
-        const { error } = await stripe.redirectToCheckout({ sessionId });
-        if (error) console.error('Stripe Checkout error:', error.message);
-      }
-    } catch (error: any) {
-      console.error('Error creating checkout session:', error.response?.data?.error || error.message);
-      toast.error('An error occurred while processing your donation. Please try again.');
-    }
-  };
-  
-  
 
   return (
     <div className='pt-20 dark:bg-[#11161b]'>
@@ -96,10 +67,10 @@ const DonationTiers = () => {
               ))}
             </div>
             <hr className='my-10 border-[#a8a8a8] dark:border-[#252525]' />
-            <button onClick={handleDonateClick} className='Btn bg-black font-Cairo dark:bg-[#131313] w-full flex items-center justify-center'>
+            <Link target='_blank' href={'https://donate.stripe.com/test_aEU7vffBi5yUf8QeUW'} className='Btn bg-black font-Cairo dark:bg-[#131313] w-full flex items-center justify-center'>
               <p>Donate</p>
               <MdOutlinePayments className='svgIcon text-[25px]' />
-            </button>
+            </Link>
           </div>
         </div>
       </div>
