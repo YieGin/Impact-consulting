@@ -7,6 +7,7 @@ interface GuestNavProps {
 }
 
 const GuestNav: React.FC<GuestNavProps> = ({ closeMenu }) => {
+  
 
   return (
     <div className='font-Cairo flex flex-col lg-md:flex-row gap-5 '>

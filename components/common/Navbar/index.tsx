@@ -37,12 +37,13 @@ const Navbar: React.FC = () => {
       window.removeEventListener('scroll', controlNavbar);
     };
   }, [lastScrollY]);
+  const dummyCloseMenu = () => {}; 
 
   return (
     <nav style={{ top: showNav ? '0' : `-${navbarHeight}px` }} className="bg-white lg:px-10 dark:bg-[#11161b] text-white p-4 font-Cairo w-full border-b-[1px] z-50 border-[#E1E1E1] dark:border-[#555555] sticky top-0 right-0 transition-top duration-500">
       <div className="flex items-center justify-between w-full">
         <div className='lg-md:flex xs:hidden gap-x-5'>
-          <GuestNav />
+          <GuestNav closeMenu={dummyCloseMenu} />
         </div>
         <LogoDisplay />
         <div className='flex items-center gap-x-5'>
