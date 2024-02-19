@@ -8,6 +8,8 @@ import { LiaStarSolid } from 'react-icons/lia'
 import Faq from '../faq/page'
 import { Involved } from '@/components/common/LandingPage'
 import { motion } from 'framer-motion';
+import AnimatedLettersWhite from '../blog/AnimatedLetters'
+import AnimatedLetters from '../services/AnimatedLetters'
 
 type SectionProps = {
   buttonText1?: string;
@@ -101,7 +103,7 @@ const Testimonials = () => {
         <div className='gap-y-5 flex flex-col items-center justify-center text-center py-10 lg:px-20 md:px-10 xs:px-5 z-20 relative'>
           <div className='flex flex-col items-center justify-center text-center'>
             <p className='font-bold text-[20px] text-[#F5F5F5] dark:text-white'>Empower</p>
-            <h1 className='font-bold text-[#fff] dark:text-white lg:text-[46px] md:text-[26px]'>Inspiring Testimonials</h1>
+            <AnimatedLettersWhite text='Inspiring Testimonials' />
           </div>
           <div className='flex flex-col items-center justify-center'>
             <p className='lg:text-[18px] xs:text-[14px] text-[#F5F5F5] dark:text-[#d3d3d3]'>
@@ -122,7 +124,7 @@ const Testimonials = () => {
         </div>
       </div>
       <div className='py-10 pb-14 lg:px-20 md:px-10 xs:px-5 w-full dark:bg-[#181c20]'>
-        <h1 className='font-bold text-[#2F4F4F] dark:text-white xs:text-[30px] md:text-[46px]'>Customer testimonials</h1>
+        <AnimatedLetters text='Customer testimonials' />
         <p className='font-bold md:text-[20px] xs:text-[16px] text-[#222] dark:text-white mb-10'>Read what others have to say about my organization.</p>
         <div className='grid lg:grid-cols-2 xl:grid-cols-3 xs:grid-cols-1 gap-x-5 gap-y-10'>
           {TestimonialsList.map((item, index) => (
@@ -153,7 +155,7 @@ const Testimonials = () => {
       <div className='flex gap-x-20 gap-y-5 xs:flex-wrap lg:flex-nowrap lg:px-20 md:px-10 xs:px-5 pt-20 pb-10 bg-white dark:bg-[#11161b]'>
         <div className='lg:w-1/2'>
           <p className='font-bold text-[20px] text-[#11142D] dark:text-white'>Empower</p>
-          <h1 className='font-bold text-[#2F4F4F] dark:text-white xs:text-[18px] lg:text-[46px] md:text-[26px] xl:w-[70%]'>Make a Difference Today</h1>
+          <AnimatedLetters text='Make a Difference Today' />
           <p className='font-semibold md:text-[16px] xs:text-[13px] text-[#464B70] dark:text-[#c5c5c5] my-5'>
             Join me in providing hope and support to children in need.
           </p>
@@ -187,7 +189,7 @@ const Testimonials = () => {
         <div className='gap-y-5 flex flex-col justify-center h-full py-10 lg:px-20 md:px-10 xs:px-5 z-20 relative'>
           <div>
             <p className='font-bold text-[20px] text-[#F5F5F5] dark:text-white'>Empower</p>
-            <h1 className='font-bold text-[#fff] dark:text-white lg:text-[46px] md:text-[26px]'>Make a Difference Today</h1>
+            <AnimatedLettersWhite text='Make a Difference Today' />
           </div>
           <div>
             <p className='lg:text-[18px] xs:text-[14px] text-[#F5F5F5] dark:text-[#d3d3d3]'>

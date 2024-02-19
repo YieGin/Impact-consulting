@@ -6,6 +6,8 @@ import Link from 'next/link';
 import React from 'react'
 import { BiSolidDonateHeart } from 'react-icons/bi';
 import { motion } from 'framer-motion';
+import AnimatedLetters from './AnimatedLetters';
+import AnimatedLettersWhite from '../blog/AnimatedLetters'
 
 type SectionProps = {
   buttonText1?: string;
@@ -16,6 +18,10 @@ type SectionProps = {
   position?: string;
   description?: string;
 };
+
+interface AnimatedLettersProps {
+  text: string;
+}
 
 const sections = [
   {
@@ -89,7 +95,6 @@ const sectionsContent = [
   },
 ];
 
-
 const ButtonGroup:React.FC<SectionProps> = ({ buttonText1, link1 }) => (
   <Link href={link1} className='w-[120px] h-[50px] flex items-center justify-center text-[18px] text-white bg-[#000] transition duration-300 ease-in-out gap-x-2'>
     <BiSolidDonateHeart />
@@ -106,12 +111,12 @@ const TextSection:React.FC<SectionProps> = ({ title, description }) => (
 
 const Services = () => {
   const fadeInVariant = {
-    hidden: { opacity: 0, x: 50 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.9 } },
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.9 } },
   };
   const fadeInVariantLeft = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.9 } },
+    hidden: { opacity: 0, y: -50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.9 } },
   };
 
   return (
@@ -121,7 +126,7 @@ const Services = () => {
         <div className='gap-y-5 flex flex-col items-center justify-center text-center py-10 lg:px-20 md:px-10 xs:px-5 z-20 relative'>
           <div className='flex flex-col items-center justify-center text-center'>
             <p className='font-bold text-[20px] text-[#F5F5F5] dark:text-white'>Empower</p>
-            <h1 className='font-bold text-[#fff] dark:text-white lg:text-[46px] md:text-[26px] xl:w-[70%]'>Transforming Lives Together</h1>
+            <AnimatedLettersWhite text='Transforming Lives Together' />
           </div>
           <div className='flex flex-col items-center justify-center'>
             <p className='lg:text-[18px] xs:text-[14px] text-[#F5F5F5] dark:text-[#d3d3d3] lg:w-1/2'>
@@ -153,7 +158,7 @@ const Services = () => {
               className='lg:w-1/2'
             >
               <p className='font-bold md:text-[20px] xs:text-[16px] text-[#11142D] dark:text-white'>Empower</p>
-              <h1 className='font-bold text-[#2F4F4F] dark:text-white xs:text-[15px] sm:text-[20px] lg:text-[46px] md:text-[26px] xl:w-[70%]'>{section.title}</h1>
+              <AnimatedLetters text={section.title} />
               <p className='font-Roboto xs:text-[14px] md:text-[16px] text-[#222] dark:text-[#eee] md:my-5 xs:mb-3'>{section.description}</p>
               <div className='flex flex-col gap-y-5'>
                 <TextSection
@@ -195,7 +200,7 @@ const Services = () => {
               className='lg:w-1/2'
             >
               <p className='font-bold md:text-[20px] text-[#11142D] dark:text-white'>Empower</p>
-              <h1 className='font-bold text-[#2F4F4F] dark:text-white xs:text-[20px] sm:text-[25px] lg:text-[46px] md:text-[26px] xl:w-[70%]'>{section.title}</h1>
+              <AnimatedLetters text={section.title} />
               <p className='font-Roboto xs:text-[14px] md:text-[16px] text-[#222] dark:text-[#eee] md:my-5 xs:mb-3'>{section.description}</p>
               <div className='flex flex-col gap-y-5'>
                 <TextSection
@@ -237,7 +242,7 @@ const Services = () => {
               className='lg:w-1/2'
             >
               <p className='font-bold md:text-[20px] text-[#11142D] dark:text-white'>Empower</p>
-              <h1 className='font-bold text-[#2F4F4F] dark:text-white xs:text-[15px] sm:text-[20px] lg:text-[46px] md:text-[26px] xl:w-[70%]'>{section.title}</h1>
+              <AnimatedLetters text={section.title} />
               <p className='font-Roboto xs:text-[14px] md:text-[16px] text-[#222] dark:text-[#eee] md:my-5 xs:mb-3'>{section.description}</p>
               <div className='flex flex-col gap-y-5'>
                 <TextSection

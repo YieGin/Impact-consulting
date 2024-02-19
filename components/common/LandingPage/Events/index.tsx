@@ -8,6 +8,7 @@ import { IoIosArrowForward } from 'react-icons/io';
 import { useThemeMenu } from '../../Navbar/Theme/ThemeMenuProvider';
 import { Logo, LogoBlack } from '@/public/images';
 import { motion, useAnimation } from 'framer-motion';
+import AnimatedLetters from '@/app/services/AnimatedLetters';
 
 const Events = () => {
   const { theme } = useThemeMenu();
@@ -47,7 +48,7 @@ const Events = () => {
     <div className='mt-32 font-Cairo xs:px-5 md:px-0'>
       <div className='lg:px-20 md:px-10'>
         <p className='font-bold md:text-[20px] text-[#11142D] dark:text-white'>Join</p>
-        <h1 className='font-bold text-[#2F4F4F] dark:text-white text-[46px]'>Upcoming</h1>
+        <AnimatedLetters text='Upcoming' />
         <p className='font-semibold md:text-[20px] xs:text-[14px] text-[#11142D] dark:text-white'>Stay updated with our exciting community events.</p>
       </div>
       <div className='flex xs:flex-wrap xl:flex-nowrap gap-x-5 lg:px-20 md:px-10'>
@@ -62,20 +63,16 @@ const Events = () => {
             custom={index}
           >
             <Image className='w-full h-[300px] object-cover' width={4000} height={3000} src={item.Image} alt={`event image ${index}`} />
-            <div className='px-5 flex flex-col gap-y-5 pb-5'>
-              <p className='bg-[#EEEEEE] px-2 py-1 font-bold w-max md:text-[18px] xs:text-[13px]'>Category</p>
+            <div className='px-5 flex flex-col gap-y-5 pb-2'>
+              <p className='py-1 font-bold w-max md:text-[18px] xs:text-[13px]'>Category</p>
               <h1 className='font-bold text-[#2F4F4F] dark:text-white md:text-[26px]'>{item.title}</h1>
               <p className='font-semibold md:text-[17px] xs:text-[14px] text-[#11142D] dark:text-[#eee]'>{item.description}</p>
-              <div className='flex gap-x-2 items-center text-[#11142D] w-max cursor-pointer hover:text-teal-600 dark:hover:text-teal-600 dark:text-[#eee]'>
-                <p className='font-bold text-[18px] font-Roboto'>View event</p>
-                <IoIosArrowForward className='font-bold text-[18px]' />
-              </div>
             </div>
           </motion.div>
         ))}
       </div>
       <div className='flex flex-col gap-y-5 mt-10 lg:px-20 md:px-10'>
-        <h1 className='font-bold text-[#2F4F4F] dark:text-white md:text-[46px] xs:text-[22px]'>Help Us Make a Difference</h1>
+        <AnimatedLetters text='Help Us Make a Difference' />
         <p className='font-semibold md:text-[20px] xs:text-[14px] text-[#11142D] dark:text-white'>Your donation can provide education, healthcare, and hope to children in Africa.</p>
         <div className='flex gap-x-5'>
           <Link href={'/donate'} className='w-max px-5 py-2 text-[18px] bg-[#FFA500] hover:bg-[#ffc457] transition duration-300 ease-in-out flex items-center'>

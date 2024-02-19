@@ -4,6 +4,7 @@ import { ImConfused2 } from 'react-icons/im'
 import { Transition } from '@headlessui/react'
 import { MdKeyboardArrowDown } from 'react-icons/md'
 import Link from 'next/link'
+import AnimatedLetters from '../Discover/AnimatedLetters'
 
 const Faq = () => {
   const [selectedQuestion, setSelectedQuestion] = useState<number | null>(null);
@@ -26,7 +27,7 @@ const Faq = () => {
 
   return (
     <div className='md:pt-20 xs:pt-10 flex items-center justify-center flex-col font-Cairo lg:px-20 md:px-10 xs:px-5 bg-white dark:bg-[#11161b] py-10'>
-      <h1 className='font-bold text-[#2F4F4F] dark:text-white md:text-[46px] xs:text-[26px] text-center'>Frequently Asked Questions</h1>
+      <AnimatedLetters text='Frequently Asked Questions' />
       <p className='font-semibold text-center lg:text-[20px] md:text-[18px] xs:text-[14px] text-[#11142D] dark:text-[#eee]'>Find answers to common questions about our organization, how to help, and where donations go.</p>
       <div className='mt-20 xs:w-full lg:w-[50%]'>
         {questionsAndAnswers.map((item, index) => (
@@ -55,7 +56,7 @@ const Faq = () => {
         ))}
       </div>
       <div className='mt-20 md:mb-10 lg:mb-0 flex flex-col items-center lg:gap-y-5 md:gap-y-2'>
-        <h1 className='font-bold text-[#2F4F4F] dark:text-white md:text-[46px] xs:text-[30px]'>Still have questions?</h1>
+        <AnimatedLetters text='Still have questions?' />
         <p className='font-bold md:text-[20px] xs:text-[17px] text-[#11142D] dark:text-[#eee]'>Contact us for more information.</p>
         <Link href={'/contact'} className='border-2 border-[#666666] cursor-pointer px-5 py-2 text-[#11142D] dark:text-[#eee] hover:bg-[#222] hover:text-white font-semibold w-max'>
           <p>Contact</p>

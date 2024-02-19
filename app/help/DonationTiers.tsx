@@ -2,6 +2,8 @@ import Link from 'next/link';
 import React from 'react';
 import { FcCheckmark } from 'react-icons/fc';
 import { MdOutlinePayments } from 'react-icons/md';
+import AnimatedLetters from '../services/AnimatedLetters';
+import AnimatedLettersTitle from '../blog/AnimatedLettersTitle';
 
 const DonationTiers = () => {
   const benefits = [
@@ -15,9 +17,7 @@ const DonationTiers = () => {
     <div className='pt-20 dark:bg-[#11161b]'>
       <div className='lg:w-1/2 lg:px-20 md:px-10 xs:px-5'>
         <p className='font-bold text-[20px] text-[#11142D] dark:text-white'>Empower</p>
-        <h1 className='font-bold text-[#2F4F4F] dark:text-white xs:text-[18px] lg:text-[46px] md:text-[26px] xl:w-[70%]'>
-          Donation Tiers
-        </h1>
+        <AnimatedLetters text='Donation Tiers' />
         <p className='font-semibold md:text-[16px] xs:text-[13px] text-[#464B70] dark:text-[#c5c5c5] my-5'>
           Every donation brings a glimmer of hope and a step towards a brighter future for children across Africa.
           Our Donation Tiers have been thoughtfully established to show how your generosity can make a tangible difference in the lives of these children.
@@ -30,19 +30,19 @@ const DonationTiers = () => {
         <div className='lg:w-1/2 flex flex-col gap-y-5'>
           <div className='flex items-center gap-x-2'>
             <div className='flex flex-col gap-y-1'>
-              <h1 className='font-bold text-[#2F4F4F] dark:text-white text-[25px]'>Impactful Donations</h1>
+              <AnimatedLettersTitle text='Impactful Donations' />
               <p className='font-semibold md:text-[16px] xs:text-[13px] text-[#464B70] dark:text-[#c5c5c5]'>Choose a donation amount that can make a difference.</p>
             </div>
           </div>
           <div className='flex items-center gap-x-2'>
             <div className='flex flex-col gap-y-1'>
-              <h1 className='font-bold text-[#2F4F4F] dark:text-white text-[25px]'>Sustainable Solutions</h1>
+              <AnimatedLettersTitle text='Sustainable Solutions' />
               <p className='font-semibold md:text-[16px] xs:text-[13px] text-[#464B70] dark:text-[#c5c5c5]'>See how your donation can help change lives.</p>
             </div>
           </div>
           <div className='flex items-center gap-x-2'>
             <div className='flex flex-col gap-y-1'>
-              <h1 className='font-bold text-[#2F4F4F] dark:text-white text-[25px]'>Education Programs</h1>
+              <AnimatedLettersTitle text='Education Programs' />
               <p className='font-semibold md:text-[16px] xs:text-[13px] text-[#464B70] dark:text-[#c5c5c5]'>Support long-term projects that create lasting impact.</p>
             </div>
           </div>

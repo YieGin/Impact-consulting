@@ -7,6 +7,8 @@ import { MdCastForEducation } from 'react-icons/md'
 import { RiMentalHealthFill } from 'react-icons/ri'
 import Faq from '../faq/page';
 import { Involved } from '@/components/common/LandingPage';
+import AnimatedLettersWhite from '../blog/AnimatedLetters';
+import AnimatedLetters from '../services/AnimatedLetters';
 
 type SectionProps = {
   buttonText1?: string;
@@ -80,7 +82,7 @@ const Certificates = () => {
         <div className='gap-y-5 flex flex-col items-center justify-center text-center py-10 lg:px-20 md:px-10 xs:px-5 z-20 relative'>
           <div className='flex flex-col items-center justify-center text-center'>
             <p className='font-bold text-[20px] text-[#F5F5F5] dark:text-white'>Join</p>
-            <h1 className='font-bold text-[#fff] dark:text-white lg:text-[46px] md:text-[26px] xl:w-[70%]'>Achievements and Learning</h1>
+            <AnimatedLettersWhite text='Achievements and Learning' />
           </div>
           <div className='flex flex-col items-center justify-center'>
             <p className='lg:text-[18px] xs:text-[14px] text-[#F5F5F5] dark:text-[#d3d3d3] lg:w-1/2'>
@@ -99,7 +101,7 @@ const Certificates = () => {
         {courseSections.map((section, index) => (
           <div key={index} className={`${section.position === "right" ? "xl:flex-row xs:flex-col" : "xl:flex-row-reverse xs:flex-col"} flex gap-x-20 items-center xs:py-5 xs:px-5 md:px-20 md:py-10 xl:py-20`}>
             <div className='xl:w-1/2'>
-              <h1 className='md:text-[30px] xs:text-[20px] sm:text-[25px] font-bold text-[#2F4F4F] dark:text-white uppercase'>{section.header}</h1>
+              <AnimatedLetters text={section.header} />
               <p className='font-semibold text-[16px] text-[#464B70] dark:text-[#c5c5c5] lg:w-[90%]' dangerouslySetInnerHTML={{ __html: section.introText }}></p>
               <div className='flex gap-x-5 items-center mt-5'>
                 <ButtonGroup buttonText1="Services" link1={'/services'} />

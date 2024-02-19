@@ -1,3 +1,4 @@
+import AnimatedLetters from '@/app/services/AnimatedLetters'
 import React from 'react'
 import { HiBuildingOffice } from 'react-icons/hi2'
 import { MdEmail, MdLocalPhone } from 'react-icons/md'
@@ -7,7 +8,7 @@ const Involved = () => {
     <div className='flex flex-wrap gap-5 w-full justify-between lg:px-20 md:px-10 xs:px-5 mt-20 pb-20'>
       <div className='flex flex-col gap-y-5'>
         <p className='font-bold md:text-[18px] xs:text-[14px] text-[#11142D] dark:text-[#eee]'>Empowering</p>
-        <h1 className='font-bold text-[#2F4F4F] dark:text-white md:text-[46px] xs:text-[30px]'>Get Involved</h1>
+        <AnimatedLetters text='Get Involved' />
         <p className='font-semibold md:text-[18px] xs:text-[14px] text-[#11142D] dark:text-[#eee]'>We would love to hear from you. Please reach out to us with any questions or inquiries.</p>
       </div>
       <div className='flex flex-col gap-y-3 mt-10 font-sans'>

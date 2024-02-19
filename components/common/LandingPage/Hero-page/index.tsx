@@ -1,3 +1,4 @@
+import AnimatedLetters from '@/app/services/AnimatedLetters'
 import { HeroImage } from '@/public/images'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -8,7 +9,7 @@ const HeroPage = () => {
   return (
     <div className="flex font-Cairo dark:bg-[#11161b]">
       <div className='w-1/2 xs:hidden lg:flex flex-col justify-center ml-20'>
-        <h1 className='font-bold text-[#2F4F4F] dark:text-white text-[46px] w-[80%]'>Providing Hope and Support for African Children</h1>
+        <AnimatedLetters text='Providing Hope and Support for African Children' />
         <p className='text-[18px] text-[#11142D] w-[80%] dark:text-[#eee]'>
           Join us in making a difference in the lives of African children who need our help. Together, we can create a brighter future.
         </p>

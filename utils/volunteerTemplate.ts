@@ -27,7 +27,7 @@ export function getVolunteerTemplate({ from, firstName, lastName, phoneNumber, s
           <p><strong>Selected:</strong> ${selectedProduct}</p>
         </div>
         <footer style="text-align: center; color: #888888; font-size: 12px; margin-top: 20px;">
-          This email was sent from the contact form on <a style="color: #2F4F4F;" href='http://localhost:3000'>Diana.com</a>
+          This email was sent from the contact form on <a style="color: #2F4F4F;" href='https://impact-consulting-xi.vercel.app'>Diana.com</a>
         </footer>
       </div>
     </body>

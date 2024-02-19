@@ -9,6 +9,8 @@ import ContactForm from './ContactForm'
 import { Faq, Involved } from '@/components/common/LandingPage'
 import { LiaStarSolid } from 'react-icons/lia'
 import { motion } from 'framer-motion';
+import AnimatedLettersWhite from '../blog/AnimatedLetters'
+import AnimatedLetters from '../services/AnimatedLetters'
 
 const Donate = () => {
   const TestimonialsList = [
@@ -48,7 +50,7 @@ const Donate = () => {
         <div className='gap-y-5 flex flex-col items-center justify-center text-center py-10 lg:px-20 md:px-10 xs:px-5 z-20 relative'>
           <div className='flex flex-col items-center justify-center text-center'>
             <p className='font-bold text-[20px] text-[#F5F5F5] dark:text-white'>Empower</p>
-            <h1 className='font-bold text-[#fff] dark:text-white lg:text-[46px] md:text-[26px]'>Transforming Lives Together</h1>
+            <AnimatedLettersWhite text='Transforming Lives Together' />
           </div>
           <div className='flex flex-col items-center justify-center'>
             <p className='lg:text-[18px] xs:text-[14px] text-[#F5F5F5] dark:text-[#d3d3d3]'>
@@ -72,7 +74,7 @@ const Donate = () => {
         <Pricing />
       </div>
       <div className='py-10 lg:px-20 md:px-10 xs:px-5 w-full bg-white dark:bg-[#181c20]'>
-        <h1 className='font-bold text-[#2F4F4F] dark:text-white xs:text-[36px] md:text-[46px]'>Testimonials</h1>
+        <AnimatedLetters text='Testimonials' />
         <p className='font-bold md:text-[20px] xs:text-[16px] text-[#222] dark:text-white'>Discover the heartfelt stories of our donors and the meaningful differences their contributions have created. </p>
         <div className='flex xs:flex-wrap lg:flex-nowrap gap-x-5'>
           {TestimonialsList.map((item, index) => (

@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import Image from 'next/image';
 import { Image10 } from '@/public/images';
 import { Spinner } from '@/utils';
+import AnimatedLetters from '../services/AnimatedLetters';
 
 interface SimpleFormData {
   name: string;
@@ -57,7 +58,7 @@ const ContactForm: React.FC = () => {
     <div className='py-20 flex xs:flex-col lg:flex-row lg:px-20 gap-y-5 w-full dark:bg-[#181c20]'>
       <form onSubmit={handleSubmit} className='xs:px-5 md:px-5 lg:w-1/2'>
         <p className='font-bold md:text-[19px] xs:text-[14px] text-[#000] dark:text-[#eee]'>Support</p>
-        <h1 className='font-bold text-[#2F4F4F] dark:text-white sm:text-[26px] lg:text-[46px]'>Get in touch</h1>
+        <AnimatedLetters text='Get in touch' />
         <p className='font-semibold md:text-[17px] xs:text-[14px] text-[#11142D] dark:text-[#eee]'>Donate to make a difference in the lives of children in Africa.</p>
         <div className='flex flex-col gap-y-5 mt-5'>
           <div className='flex flex-col gap-y-1'>

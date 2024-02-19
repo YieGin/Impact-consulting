@@ -1,3 +1,4 @@
+import AnimatedLetters from '@/app/services/AnimatedLetters'
 import { Image10, Image5 } from '@/public/images'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -38,7 +39,7 @@ const Description = () => {
       <div className='flex gap-x-20 gap-y-5 xs:flex-wrap-reverse lg:flex-nowrap lg:px-20 md:px-10 xs:px-5 bg-white py-20 dark:bg-[#11161b]'>
         <div className='lg:w-1/2'>
           <p className='font-bold text-[20px] text-[#11142D] dark:text-white'>Empower</p>
-          <h1 className='font-bold text-[#2F4F4F] dark:text-white lg:text-[46px] md:text-[26px] xl:w-[70%]'>Make a Difference in Kids Lives</h1>
+          <AnimatedLetters text='Make a Difference in Kids Lives' />
           <p className='font-semibold text-[16px] text-[#464B70] dark:text-[#c5c5c5] my-5'>
             Support our nonprofit organization and help improve the lives of children in Africa.
             Your contribution can make a lasting impact and provide them with a brighter future.
@@ -55,12 +56,12 @@ const Description = () => {
           </div>
           <ButtonGroup buttonText1="Donate" buttonText2="Get Involved" link1={'/donate'} link2={'/contact'} />
         </div>
-        <div className='lg:w-1/2'>
+        <div className='lg:w-1/2 pl-5'>
           <Image className='w-full h-[500px] object-cover' width={1000} height={30} src={Image10} alt='Hero Image' />
         </div>
       </div>
 
-      <div className='gap-y-5 flex xs:flex-wrap-reverse lg:flex-nowrap gap-x-20 dark:bg-[#11161b] py-10 lg:px-20 md:px-10 xs:px-5'>
+      <div className='gap-y-5 flex xs:flex-wrap lg:flex-nowrap gap-x-20 dark:bg-[#11161b] py-10 lg:px-20 md:px-10 xs:px-5'>
         <div className='lg:w-1/2'>
           <p className='font-bold text-[20px] text-[#11142D] dark:text-white'>Empower</p>
           <h1 className='font-bold text-[#2F4F4F] dark:text-white lg:text-[46px] md:text-[26px] xl:w-[70%]'>Transforming Lives Through Education and Opportunity</h1>

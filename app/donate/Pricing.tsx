@@ -4,6 +4,7 @@ import { FcCheckmark } from 'react-icons/fc';
 import { MdOutlinePayments } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import AnimatedLetters from '../services/AnimatedLetters';
 
 interface Plan {
   title: string;
@@ -130,7 +131,7 @@ const Pricing: React.FC = () => {
           I promise to deliver the same level of professionalism, dedication, and quality in my pro bono work as I do in my paid engagements.
           Your mission is important, and I&apos;m here to help you achieve it.
         </p>
-        <h1 className='font-bold text-[#2F4F4F] dark:text-white md:text-[36px] mt-10'>Donation Options</h1>
+        <AnimatedLetters text='Donation Options' />
       </div>
       <div className='flex items-center mt-5'>
         <button onClick={() => setPeriod('monthly')} className={`w-[120px] h-[50px] flex items-center justify-center text-[18px] ${period === 'monthly' ? 'text-white bg-[#000]' : 'text-[#000] dark:text-[#eee]'} transition duration-300 ease-in-out gap-x-2 cursor-pointer border-2 border-[#666666]`}>

@@ -6,6 +6,7 @@ import axios from "axios"
 import { toast } from 'react-toastify';
 import { Spinner } from '@/utils';
 import { FaRegCircle } from 'react-icons/fa6';
+import AnimatedLetters from '../services/AnimatedLetters';
 interface FormData {
   firstName: string;
   lastName: string;
@@ -54,26 +55,22 @@ const Touch: React.FC = () => {
       setIsSubmitting(true);
       try {
         const response = await axios.post('/api/send-volunteer', formData);
-        console.log(response.data.message);
         toast.success('Thank you for your application! We appreciate your interest and will respond to your email as soon as possible.');
       } catch (error) {
         if (axios.isAxiosError(error)) {
-          console.log('Submission error:', error.response?.data.message);
           toast.error('An error occurred while submitting the form.');
         } else {
-          console.error('Unexpected error:', error);
         }
       } finally {
         setIsSubmitting(false);
       }
     } else {
-      console.log('Validation errors:', errors);
     }
   };
   return (
     <div className='py-20 flex flex-col items-center bg-white dark:bg-[#11161b]'>
       <form onSubmit={handleSubmit} className='xs:px-5 md:px-0 md:w-max'>
-        <h1 className='font-bold text-[#2F4F4F] dark:text-white sm:text-[26px]'>Get in touch</h1>
+        <AnimatedLetters text='Get in touch' />
         <p className='font-semibold md:text-[17px] xs:text-[14px] text-[#11142D] dark:text-[#eee]'>Fill out the application form below to become a volunteer.</p>
         <div className='flex xs:flex-col md:flex-row gap-x-20 gap-y-5 mt-5'>
           {/* First Name */}

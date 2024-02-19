@@ -9,6 +9,8 @@ import { FacebookIcon, FacebookShareButton, TwitterIcon, TwitterShareButton } fr
 import DonationTiers from './DonationTiers'
 import Touch from './Touch'
 import { Faq, Involved } from '@/components/common/LandingPage'
+import AnimatedLettersWhite from '../blog/AnimatedLetters'
+import AnimatedLetters from '../services/AnimatedLetters'
 
 const HowToHelp = () => {
   const [currentUrl, setCurrentUrl] = useState('');
@@ -48,7 +50,7 @@ const HowToHelp = () => {
         <div className='gap-y-5 flex flex-col items-center justify-center text-center py-10 lg:px-20 md:px-10 xs:px-5 z-20 relative'>
           <div className='flex flex-col items-center justify-center text-center'>
             <p className='font-bold text-[20px] text-[#F5F5F5] dark:text-white'>Empower</p>
-            <h1 className='font-bold text-[#fff] dark:text-white lg:text-[46px] md:text-[26px]'>Make a Difference</h1>
+            <AnimatedLettersWhite text='Make a Difference' />
           </div>
           <div className='flex flex-col items-center justify-center'>
             <p className='lg:text-[18px] xs:text-[14px] text-[#F5F5F5] dark:text-[#d3d3d3]'>
@@ -67,13 +69,13 @@ const HowToHelp = () => {
         </div>
       </div>
       <div className='flex xl:flex-row xs:flex-col pt-20 lg:px-20 md:px-10 xs:px-5 bg-white dark:bg-[#181c20]'>
-        <h1 className='font-bold text-[#2F4F4F] dark:text-white md:text-[46px] xs:text-[26px] xl:w-[50%]'>Discover Multiple Ways to Make a Difference</h1>
+        <AnimatedLetters text='Discover Multiple Ways to Make a Difference' />
       </div>
       <div className='flex flex-wrap gap-x-5 lg:px-20 md:px-10 pb-20 dark:bg-[#181c20] bg-white'>
         {DonateList.map((item, index) => (
           <div key={index} className='shadow-md relative xs:w-full lg:w-[350px] xl:w-[570px] flex flex-col gap-y-5 mt-10 dark:border-[1px] dark:border-[#666] h-full'>
             <div className='overflow-hidden w-full h-[300px] relative'>
-              <Image className='w-full h-full object-cover transition-transform duration-200 hover:scale-110' width={4000} height={3000} src={item.Image} alt={`event image ${index}`} />
+              <Image className='w-full h-full object-cover transition-transform duration-700 hover:scale-105' width={4000} height={3000} src={item.Image} alt={`event image ${index}`} />
             </div>
             <div className='px-5 flex flex-col gap-y-5 pb-5'>
               <h1 className='font-bold text-[#2F4F4F] dark:text-white md:text-[26px]'>{item.title}</h1>
@@ -113,7 +115,8 @@ const HowToHelp = () => {
         <div className='gap-y-5 flex flex-col justify-center h-full py-10 lg:px-20 md:px-10 xs:px-5 z-20 relative'>
           <div>
             <p className='font-bold text-[20px] text-[#F5F5F5] dark:text-white'>Empower</p>
-            <h1 className='font-bold text-[#fff] dark:text-white lg:text-[46px] md:text-[26px]'>Support African Kids in Need</h1>
+            <AnimatedLettersWhite text='Support African Kids in Need' />
+            <AnimatedLettersWhite text='Discover Multiple Ways to Make a Difference' />
           </div>
           <div>
             <p className='lg:text-[18px] xs:text-[14px] text-[#F5F5F5] dark:text-[#d3d3d3]'>

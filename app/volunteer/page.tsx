@@ -10,6 +10,9 @@ import { MdEmail, MdLocalPhone } from 'react-icons/md';
 import Touch from '../help/Touch';
 import { Faq, Involved } from '@/components/common/LandingPage';
 import { motion } from 'framer-motion';
+import AnimatedLettersWhite from '../blog/AnimatedLetters';
+import AnimatedLetters from '../services/AnimatedLetters';
+import AnimatedLettersTitle from '../blog/AnimatedLettersTitle';
 
 type SectionProps = {
   buttonText1?: string;
@@ -75,7 +78,7 @@ const Volunteer = () => {
         <div className='gap-y-5 flex flex-col items-center justify-center text-center py-10 lg:px-20 md:px-10 xs:px-5 z-20 relative'>
           <div className='flex flex-col items-center justify-center text-center'>
             <p className='font-bold text-[20px] text-[#F5F5F5] dark:text-white'>Join</p>
-            <h1 className='font-bold text-[#fff] dark:text-white lg:text-[46px] md:text-[26px] xl:w-[70%]'>Make a Difference</h1>
+            <AnimatedLettersWhite text='Make a Difference' />
           </div>
           <div className='flex flex-col items-center justify-center'>
             <p className='lg:text-[18px] xs:text-[14px] text-[#F5F5F5] dark:text-[#d3d3d3] lg:w-1/2'>
@@ -93,7 +96,7 @@ const Volunteer = () => {
       <div className='flex gap-x-20 gap-y-5 xs:flex-wrap lg:flex-nowrap lg:px-20 md:px-10 xs:px-5 xs:pt-10 md:pt-20 pb-10 bg-white dark:bg-[#11161b]'>
         <div className='lg:w-1/2'>
           <p className='font-bold text-[20px] text-[#11142D] dark:text-white'>Empower</p>
-          <h1 className='font-bold text-[#2F4F4F] dark:text-white xs:text-[18px] lg:text-[46px] md:text-[26px] xl:w-[70%]'>Make a Difference in Africa&lsquo;s Future</h1>
+          <AnimatedLetters text='Make a Difference in Africa&lsquo;s Future' />
           <p className='font-semibold md:text-[16px] xs:text-[13px] text-[#464B70] dark:text-[#c5c5c5] xs:pb-5 md:my-5'>
             Volunteering with our organization not only benefits the children in Africa who need help, but also provides personal fulfillment
             and contributes to the betterment of the community. Join us in making a positive impact today!
@@ -124,7 +127,7 @@ const Volunteer = () => {
       </div>
       <div className='flex gap-x-20 xs:flex-wrap lg:flex-nowrap lg:px-20 md:px-10 xs:px-5 xs:mt-10 md:mt-20'>
         <div className='lg:w-1/2'>
-          <h1 className='font-bold text-[#2F4F4F] dark:text-white xs:text-[18px] lg:text-[36px] md:text-[26px] xl:w-[70%]'>
+          <h1 className='font-bold text-[#2F4F4F] dark:text-white xs:text-[18px] lg:text-[36px] md:text-[26px] xl:w-[80%]'>
             Join Our Volunteer Program and Make a Difference in Africa
           </h1>
         </div>
@@ -147,7 +150,7 @@ const Volunteer = () => {
           className='shadow-md relative xs:w-full lg:w-[350px] xl:w-[570px] flex flex-col p-5 gap-y-5 md:mt-10 dark:border-[1px] dark:border-[#666] h-full'>
             <Image className='w-full h-[300px] object-cover' width={4000} height={3000} src={item.Image} alt={`event image ${index}`} />
             <div className='flex flex-col gap-y-5 pb-5'>
-              <h1 className='font-bold text-[#2F4F4F] dark:text-white md:text-[20px] xl:text-[26px]'>{item.title}</h1>
+              <AnimatedLettersTitle text={item.title} />
               <p className='font-semibold font-sans xl:text-[17px] md:text-[14px] xs:text-[14px] text-[#11142D] dark:text-[#eee]'>{item.description}</p>
             </div>
             <Link href={'/contact'} className='flex gap-x-2 items-center text-[#11142D] w-max cursor-pointer hover:text-teal-500 dark:hover:text-teal-500 dark:text-[#eee]'>
@@ -160,9 +163,7 @@ const Volunteer = () => {
       <div className='flex xs:flex-wrap-reverse xl:flex-nowrap gap-x-10 mt-20 lg:px-20 md:px-10 xs:px-5 bg-white dark:bg-[#11161b]'>
         <div className='lg:w-1/2 xl:py-20 lg:py-0 xs:pt-10'>
           <p className='font-bold text-[20px] text-[#11142D] dark:text-white'>Join</p>
-          <h1 className='font-bold text-[#2F4F4F] dark:text-white xs:text-[18px] lg:text-[36px] md:text-[26px]'>
-            Get Involved
-          </h1>
+          <AnimatedLetters text='Get Involved' />
           <p className='font-medium font-sans md:text-[20px] text-[#11142D] dark:text-white'>Interested in volunteering? Fill out the form.</p>
           <div className='flex flex-col gap-y-3 mt-10 font-sans'>
             <div className='flex items-center gap-x-2'>

@@ -5,6 +5,7 @@ import YouTubeVideo from './YouTubeVideo'
 import { IoIosArrowForward } from 'react-icons/io'
 import Link from 'next/link'
 import { motion } from "framer-motion"
+import AnimatedLetters from './AnimatedLetters'
 
 
 const Discover = () => {
@@ -30,7 +31,7 @@ const Discover = () => {
     <div className='font-Cairo lg:px-20 md:px-10 xs:px-5'>
       <div className='flex items-center flex-col justify-center md:my-20 xs:my-5'>
         <p className='font-bold text-[20px] text-[#11142D] dark:text-[#eee]'>Latest</p>
-        <h1 className='font-bold text-[#2F4F4F] dark:text-white md:text-[46px] sm:text-[26px] xs:text-[20px]'>Discover Inspiring Blog Stories</h1>
+        <AnimatedLetters text='Discover Inspiring Blog Stories' />
         <p className='font-semibold md:text-[20px] xs:text-[14px] text-[#11142D] dark:text-[#eee]'>Stay updated with our latest blog entries.</p>
       </div>
       <motion.div

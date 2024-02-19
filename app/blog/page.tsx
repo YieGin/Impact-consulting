@@ -1,11 +1,14 @@
 'use client'
 import { Faq, Involved } from '@/components/common/LandingPage'
-import { AboutUsImg, Image13, Image14, Image15, Image16, Image17, Image18, Image25, Image26, Image27, Image28 } from '@/public/images'
+import { AboutUsImg, Image13, Image15, Image16, Image17, Image18, Image25, Image26, Image27, Image28 } from '@/public/images'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { BiSolidDonateHeart } from 'react-icons/bi'
 import { IoIosArrowForward } from 'react-icons/io'
+import AnimatedLettersWhite from './AnimatedLetters'
+import AnimatedLetters from '../services/AnimatedLetters'
+import AnimatedLettersTitle from './AnimatedLettersTitle'
 
 const Page = () => {
   const DonateList = [
@@ -72,7 +75,7 @@ const Page = () => {
         <div className='gap-y-5 flex flex-col items-center justify-center text-center py-10 lg:px-20 md:px-10 xs:px-5 z-20 relative'>
           <div className='flex flex-col items-center justify-center text-center'>
             <p className='font-bold text-[20px] text-[#F5F5F5] dark:text-white'>Empower</p>
-            <h1 className='font-bold text-[#fff] dark:text-white lg:text-[46px] md:text-[26px]'>Transforming Lives Together</h1>
+            <AnimatedLettersWhite text='Transforming Lives Together' />
           </div>
           <div className='flex flex-col items-center justify-center'>
             <p className='lg:text-[18px] xs:text-[14px] text-[#F5F5F5] dark:text-[#d3d3d3]'>
@@ -94,7 +97,7 @@ const Page = () => {
       </div>
       <div className='flex flex-col pt-20 lg:px-20 md:px-10 xs:px-5 dark:bg-[#181c20]'>
         <p className='font-bold text-[20px] text-[#11142D] dark:text-white'>Latest</p>
-        <h1 className='font-bold text-[#2F4F4F] dark:text-white md:text-[46px] xs:text-[26px] xl:w-[50%]'>Discover My Blog Posts</h1>
+        <AnimatedLetters text='Discover My Blog Posts' />
         <p className='font-bold md:text-[20px] xs:text-[14px] text-[#11142D] dark:text-white'>Stay informed with our latest blog updates.</p>
       </div>
       <div className='flex flex-wrap gap-x-5 lg:px-20 md:px-10 pb-20 dark:bg-[#181c20]'>
@@ -106,7 +109,7 @@ const Page = () => {
               <Image className='w-full h-full object-cover transition-transform duration-700 hover:scale-105' width={4000} height={3000} src={item.Image} alt={`event image ${index}`} />
             </Link>
             <div className='px-5 flex flex-col gap-y-4 pb-5 h-full'>
-              <h1 className='font-bold text-[#2F4F4F] dark:text-white md:text-[26px] line-clamp-1'>{item.title}</h1>
+              <AnimatedLettersTitle text={item.title} />
               <p className='md:text-[16px] xs:text-[14px] font-sans text-[#222] dark:text-[#eee] line-clamp-4'>{item.description}</p>
               <div className='flex justify-between mt-auto'>
                 <Link target='_blank' href={item.href} className='read_button'>
