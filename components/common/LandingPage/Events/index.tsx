@@ -64,7 +64,7 @@ const Events = () => {
           >
             <Image className='w-full h-[300px] object-cover' width={4000} height={3000} src={item.Image} alt={`event image ${index}`} />
             <div className='px-5 flex flex-col gap-y-5 pb-2'>
-              <p className='py-1 font-bold w-max md:text-[18px] xs:text-[13px]'>Category</p>
+              <p className='py-1 font-bold w-max md:text-[18px] xs:text-[13px] dark:text-white'>Category</p>
               <h1 className='font-bold text-[#2F4F4F] dark:text-white md:text-[26px]'>{item.title}</h1>
               <p className='font-semibold md:text-[17px] xs:text-[14px] text-[#11142D] dark:text-[#eee]'>{item.description}</p>
             </div>
@@ -75,7 +75,7 @@ const Events = () => {
         <AnimatedLetters text='Help Us Make a Difference' />
         <p className='font-semibold md:text-[20px] xs:text-[14px] text-[#11142D] dark:text-white'>Your donation can provide education, healthcare, and hope to children in Africa.</p>
         <div className='flex gap-x-5'>
-          <Link href={'/donate'} className='w-max px-5 py-2 text-[18px] bg-[#FFA500] hover:bg-[#ffc457] transition duration-300 ease-in-out flex items-center'>
+          <Link href={'/pro-bono'} className='w-max px-5 py-2 text-[18px] bg-[#FFA500] hover:bg-[#ffc457] transition duration-300 ease-in-out flex items-center'>
             <BiSolidDonateHeart />
             <p className='font-bold text-[20px] text-[#111111]'>Donate</p>
           </Link>
@@ -91,7 +91,7 @@ const Events = () => {
           )}
         </Link>
         <p className='font-semibold md:text-[20px] xs:text-[16px] text-[#11142D] dark:text-white lg:w-1/2 text-center'>
-          Volunteering with this nonprofit organization has been an incredibly rewarding experience.
+          Volunteering has been an incredibly rewarding experience.
           Seeing the positive impact we can make in the lives of children in Africa is truly inspiring.
         </p>
         <Image className='sm:w-[80px] rounded-full' src={Diana} alt="Logo" width={150} height={150} />

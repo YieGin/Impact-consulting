@@ -18,12 +18,9 @@ const Menu: React.FC<MenuProps> = ({ closeMenu }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const bookCategories: CategoryLink[] = [
-    { name: 'Donate', href: '/donate' },
-    { name: 'Testimonials', href: '/testimonials' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Contact me', href: '/contact' },
     { name: 'How to help', href: '/help' },
-    { name: 'Volunteer', href: '/volunteer' },
+    { name: 'About', href: '/about' },
   ];
 
   const firstHalf = bookCategories.slice(0, 4);

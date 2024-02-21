@@ -21,11 +21,11 @@ const Privacy: React.FC = () => {
       <div>
         <h1 className='font-bold text-[#2F4F4F] dark:text-white md:text-[26px]'>Privacy Statement</h1>
         <div className='font-Roboto mt-2 md:text-[17px] lg:text-[15px] xl:text-[16px] xs:text-[14px] text-[#222] dark:text-[#eee] leading-7'>
-          Welcome to Impact consulting, a nonprofit organization dedicated to supporting children in Africa. Our commitment extends not only to the cause we
-          serve but also to protecting the privacy and security of our website visitors and donors. This Privacy Policy outlines how we collect, use, protect,
-          and share information gathered through our website, including the
+          Welcome to Impact consulting, Impact Consulting, I specialize in empowering nonprofit organizations, with a keen focus on grassroots groups,
+          to make a significant impact in their communities. My goal is to transform lives and create lasting change by providing strategic guidance and support.
+          Whether you&apos;re starting out or looking to expand your reach, I&apos;m here to help turn your vision into reality or escalate your impact to a new level.
           <div className='flex flex-wrap'>
-            <Link className='text-teal-600 underline mr-1' href={'/donate'}>Donate</Link>, 
+            <Link className='text-teal-600 underline mr-1' href={'/pro-bono'}>Pro Bono</Link>, 
             <Link className='text-teal-600 underline mx-1' href={'/volunteer'}>Volunteer</Link>,
             <Link className='text-teal-600 underline mx-1' href={'/services'}>Services</Link>,
             <Link className='text-teal-600 underline mx-1' href={'/certificates'}>Certificates</Link>,

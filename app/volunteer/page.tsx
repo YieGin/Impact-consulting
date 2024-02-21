@@ -3,7 +3,6 @@ import { AboutUsImg, Image10, Image12, Image5, Image8 } from '@/public/images';
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { BiSolidDonateHeart } from 'react-icons/bi';
 import { HiBuildingOffice } from 'react-icons/hi2';
 import { IoIosArrowForward } from 'react-icons/io';
 import { MdEmail, MdLocalPhone } from 'react-icons/md';
@@ -23,12 +22,6 @@ type SectionProps = {
   description?: string;
 };
 
-const ButtonGroup:React.FC<SectionProps> = ({ buttonText1, link1 }) => (
-  <Link href={link1} className='w-[120px] h-[50px] flex items-center justify-center text-[18px] text-white bg-[#000] transition duration-300 ease-in-out gap-x-2'>
-    <BiSolidDonateHeart />
-    <p className='font-bold text-[18px] text-[#fff]'>{buttonText1}</p>
-  </Link>
-);
 
 const TextSection:React.FC<SectionProps> = ({ title, description }) => (
   <div>
@@ -75,21 +68,16 @@ const Volunteer = () => {
     <div className='dark:bg-[#181c20] bg-[#F5F5F5] font-Roboto'>
       <div className='w-full md:h-[700px] xs:h-[500px]'>
         <Image className='w-full md:h-[700px] xs:h-[500px] object-cover absolute filter brightness-50' width={1000} height={30} src={AboutUsImg} alt='Hero Image' />
-        <div className='gap-y-5 flex flex-col items-center justify-center text-center py-10 lg:px-20 md:px-10 xs:px-5 z-20 relative'>
-          <div className='flex flex-col items-center justify-center text-center'>
-            <p className='font-bold text-[20px] text-[#F5F5F5] dark:text-white'>Join</p>
+        <div className='gap-y-5 flex flex-col xs:px-5 z-20 relative h-full justify-center'>
+          <div className='flex flex-col'>
+            <p className='font-bold text-[20px] text-[#F5F5F5] dark:text-white'>Empower</p>
             <AnimatedLettersWhite text='Make a Difference' />
           </div>
-          <div className='flex flex-col items-center justify-center'>
-            <p className='lg:text-[18px] xs:text-[14px] text-[#F5F5F5] dark:text-[#d3d3d3] lg:w-1/2'>
+          <p className='lg:text-[18px] xs:text-[14px] text-[#F5F5F5] dark:text-[#d3d3d3] lg:w-1/3'>
               Become a volunteer and help improve the lives of children in Africa. Your time and dedication can make a lasting impact.
             </p>
-            <div className='flex gap-x-5 items-center mt-5'>
-              <ButtonGroup buttonText1="Donate" link1="/donate" />
-              <Link href="/contact" className='w-[120px] h-[50px] flex items-center justify-center border-2 border-[#666666] cursor-pointer text-[#fff] dark:text-[#eee] hover:bg-[#000] hover:text-white font-semibold'>
-                Get in Touch
-              </Link>
-            </div>
+          <div className='flex gap-x-5'>
+            <Link href={'/services'} className='button-learn px-4 py-2 text-[20px] text-white dark:text-white'>Learn More</Link>
           </div>
         </div>
       </div>
@@ -112,7 +100,7 @@ const Volunteer = () => {
             />
           </div>
           <div className='flex gap-x-5 items-center mt-5'>
-            <ButtonGroup buttonText1="Donate" link1={'/donate'} />
+
             <Link href={'/contact'} className='w-[120px] h-[50px] flex items-center justify-center border-2 border-[#666666] cursor-pointer text-[#000] dark:text-[#eee] hover:bg-[#000] hover:text-white font-semibold'>
               Get in touch
             </Link>
@@ -204,10 +192,6 @@ const Volunteer = () => {
               Join our volunteer program and help improve the lives of children in Africa.
             </p>
             <div className='flex gap-x-5 items-center mt-5'>
-            <Link href={''} className='w-[120px] h-[50px] flex items-center justify-center text-[18px] text-white bg-[#000] transition duration-300 ease-in-out gap-x-2'>
-              <BiSolidDonateHeart />
-              <p className='font-bold text-[20px] text-[#fff]'>Donate</p>
-            </Link>
               <Link href={'/contact'} className='w-[120px] h-[50px] flex items-center justify-center border-2 border-[#fff  ] cursor-pointer text-[#fff] dark:text-[#eee] hover:bg-[#000] hover:text-white font-semibold'>
                 Contact
               </Link>

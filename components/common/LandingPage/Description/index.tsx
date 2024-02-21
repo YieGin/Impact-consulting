@@ -10,18 +10,12 @@ import { RiMentalHealthFill } from 'react-icons/ri'
 type SectionProps = {
   title?: string;
   description?: string;
-  buttonText1?: string;
   buttonText2?: string;
-  link1?: any;
   link2?: any;
 };
 
-const ButtonGroup:React.FC<SectionProps> = ({ buttonText1, buttonText2, link1, link2 }) => (
+const ButtonGroup:React.FC<SectionProps> = ({ buttonText2, link2 }) => (
   <div className='flex gap-x-5 mt-5'>
-    <Link href={link1} className='w-max px-5 py-2 text-[18px] bg-[#FFA500] hover:bg-[#ffc457] transition duration-300 ease-in-out flex items-center gap-x-2'>
-      <BiSolidDonateHeart />
-      <p className='font-bold text-[20px] text-[#111111]'>{buttonText1}</p>
-    </Link>
     <Link href={link2} className='button-learn px-4 py-2 text-[18px] dark:text-white'>{buttonText2}</Link>
   </div>
 );
@@ -41,7 +35,7 @@ const Description = () => {
           <p className='font-bold text-[20px] text-[#11142D] dark:text-white'>Empower</p>
           <AnimatedLetters text='Make a Difference in Kids Lives' />
           <p className='font-semibold text-[16px] text-[#464B70] dark:text-[#c5c5c5] my-5'>
-            Support our nonprofit organization and help improve the lives of children in Africa.
+            Support our Impact Consulting and help improve the lives of children in Africa.
             Your contribution can make a lasting impact and provide them with a brighter future.
           </p>
           <div className='flex flex-col gap-y-5'>
@@ -54,7 +48,7 @@ const Description = () => {
               description="Together, we can give these children a chance for a brighter and more promising future."
             />
           </div>
-          <ButtonGroup buttonText1="Donate" buttonText2="Get Involved" link1={'/donate'} link2={'/contact'} />
+          <ButtonGroup buttonText2="Get Involved" link2={'/contact'} />
         </div>
         <div className='lg:w-1/2 pl-5'>
           <Image className='w-full h-[500px] object-cover' width={1000} height={30} src={Image10} alt='Hero Image' />
@@ -68,7 +62,7 @@ const Description = () => {
         </div>
         <div className='lg:w-1/2'>
           <p className='lg:text-[18px] text-[#464B70] dark:text-[#d3d3d3]'>
-            At our nonprofit organization, we are dedicated to providing essential programs and services to children in Africa.
+            At our Impact Consulting, we are dedicated to providing essential programs and services to children in Africa.
             Through education, healthcare, and community development initiatives, we aim to empower young minds and create a brighter future for all.
           </p>
           <div className='mt-5 flex flex-col gap-y-5'>
@@ -87,7 +81,7 @@ const Description = () => {
               />
             </div>
           </div>
-          <ButtonGroup buttonText1="Donate" buttonText2="Volunteer" link1={'/donate'} link2={'/volunteer'} />
+          <ButtonGroup buttonText2="Volunteer" link2={'/volunteer'} />
         </div>
       </div>
       <Image className='w-full h-[700px] object-cover' width={4000} height={3000} src={Image5} alt='Hero Image' />

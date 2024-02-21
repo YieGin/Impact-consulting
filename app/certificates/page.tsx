@@ -79,24 +79,17 @@ const Certificates = () => {
     <div className='font-Cairo dark:bg-[#181c20] bg-[#F5F5F5]'>
       <div className='w-full md:h-[700px] xs:h-[500px]'>
         <Image className='w-full md:h-[700px] xs:h-[500px] object-cover absolute filter brightness-50' width={1000} height={30} src={AboutUsImg} alt='Hero Image' />
-        <div className='gap-y-5 flex flex-col items-center justify-center text-center py-10 lg:px-20 md:px-10 xs:px-5 z-20 relative'>
-          <div className='flex flex-col items-center justify-center text-center'>
-            <p className='font-bold text-[20px] text-[#F5F5F5] dark:text-white'>Join</p>
+        <div className='gap-y-5 flex flex-col xs:px-5 z-20 relative h-full justify-center'>
+          <div className='flex flex-col'>
+            <p className='font-bold text-[20px] text-[#F5F5F5] dark:text-white'>Empower</p>
             <AnimatedLettersWhite text='Achievements and Learning' />
           </div>
-          <div className='flex flex-col items-center justify-center'>
-            <p className='lg:text-[18px] xs:text-[14px] text-[#F5F5F5] dark:text-[#d3d3d3] lg:w-1/2'>
-              Explore the milestones of my professional development journey. Each certificate represents a step forward in my commitment to excellence and continuous learning.
-            </p>
-            <div className='flex gap-x-5 items-center mt-5'>
-              <ButtonGroup buttonText1="Donate" link1="/donate" />
-              <Link href="/contact" className='w-[120px] h-[50px] flex items-center justify-center border-2 border-[#666666] cursor-pointer text-[#fff] dark:text-[#eee] hover:bg-[#000] hover:text-white font-semibold'>
-                Get in Touch
-              </Link>
-            </div>
+          <div className='flex gap-x-5'>
+            <Link href={'/services'} className='button-learn px-4 py-2 text-[20px] text-white dark:text-white'>Learn More</Link>
           </div>
         </div>
       </div>
+      
       <div className='dark:bg-[#11161b]'>
         {courseSections.map((section, index) => (
           <div key={index} className={`${section.position === "right" ? "xl:flex-row xs:flex-col" : "xl:flex-row-reverse xs:flex-col"} flex gap-x-20 items-center xs:py-5 xs:px-5 md:px-20 md:py-10 xl:py-20`}>

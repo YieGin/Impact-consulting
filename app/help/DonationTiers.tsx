@@ -7,10 +7,11 @@ import AnimatedLettersTitle from '../blog/AnimatedLettersTitle';
 
 const DonationTiers = () => {
   const benefits = [
-    { id: 1, title: "Supports education initiatives" },
-    { id: 2, title: "Provides healthcare services" },
-    { id: 3, title: "Supplies clean drinking water" },
-    { id: 4, title: "Supports nutrition programs" },
+    { id: 1, title: "Choose how you make an impact" },
+    { id: 2, title: "Support initiatives most important to you" },
+    { id: 3, title: "Flexible donations to match your capability" },
+    { id: 4, title: "Every dollar helps" },
+    { id: 5, title: "Be a part of a community" },
   ];
 
   return (
@@ -50,10 +51,9 @@ const DonationTiers = () => {
         <div className='shadow-md dark:shadow-none dark:border-[1px] dark:border-[#666] lg:w-1/2 p-5'>
           <div className='flex justify-between'>
             <div className='flex flex-col gap-y-1'>
-              <h1 className='font-bold md:text-[20px] xs:text-[15px] dark:text-[#FFF]'>Business Plan</h1>
+              <h1 className='font-bold md:text-[25px] xs:text-[15px] dark:text-[#FFF]'>Custom</h1>
               <p className='md:text-[14px] xs:text-[12px] font-medium text-[#222] dark:text-[#eee]'>Start Making a Difference Today</p>
             </div>
-            <h1 className='font-bold md:text-[30px] xs:text-[20px] text-[#222] dark:text-[#FFF]'>$15/mo</h1>
           </div>
           <hr className='mt-10 border-[#a8a8a8] dark:border-[#252525]' />
           <div>
@@ -67,7 +67,7 @@ const DonationTiers = () => {
               ))}
             </div>
             <hr className='my-10 border-[#a8a8a8] dark:border-[#252525]' />
-            <Link target='_blank' href={'https://donate.stripe.com/test_aEU7vffBi5yUf8QeUW'} className='Btn bg-black font-Cairo dark:bg-[#131313] w-full flex items-center justify-center'>
+            <Link target='_blank' href={'https://buy.stripe.com/test_00geXH1Ks6CYbWE3cg'} className='Btn bg-black font-Cairo dark:bg-[#131313] w-full flex items-center justify-center'>
               <p>Donate</p>
               <MdOutlinePayments className='svgIcon text-[25px]' />
             </Link>

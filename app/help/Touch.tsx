@@ -106,14 +106,8 @@ const Touch: React.FC = () => {
           <label className='font-semibold md:text-[16px] xs:text-[14px] text-[#11142D] dark:text-[#eee]'>Choose How You Want to Help</label>
           <select id="selectedProduct" name="selectedProduct" value={formData.selectedProduct} onChange={handleInputChange} className='w-full h-[50px] border-2 px-2'>
             <option value="">Select one...</option>
-            <option value="education_support">Education Support</option>
-            <option value="healthcare_assistance">Healthcare Assistance</option>
-            <option value="nutritional_programs">Nutritional Programs</option>
-            <option value="community_development">Community Development</option>
-            <option value="clean_water_initiatives">Clean Water Initiatives</option>
-            <option value="skills_training">Skills Training</option>
-            <option value="environmental_conservation">Environmental Conservation</option>
-            <option value="emergency_relief">Emergency Relief Efforts</option>
+            <option value="education_support">Become a facilitator</option>
+            <option value="healthcare_assistance">Become a tutor</option>
           </select>
           {errors.selectedProduct && <p className='text-red-500 xs:text-[14px] md:text-[16px]'>{errors.selectedProduct}</p>}
         </div>

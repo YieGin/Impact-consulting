@@ -14,7 +14,7 @@ const Footer = () => {
     {
       title: 'Our Mission',
       links: [
-        { href: '/donate', label: 'Donate' },
+        { href: '/pro-bono', label: 'Pro Bono' },
         { href: '/volunteer', label: 'Volunteer' },
         { href: '/contact', label: 'Contact Us' }
       ]

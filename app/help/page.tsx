@@ -45,29 +45,19 @@ const HowToHelp = () => {
 
   return (
     <div className='bg-[#F5F5F5] pb-20 dark:bg-[#181c20]'>
-      <div className='w-full md:h-[700px] xs:h-[500px] font-Cairo'>
+      <div className='w-full md:h-[700px] xs:h-[500px]'>
         <Image className='w-full md:h-[700px] xs:h-[500px] object-cover absolute filter brightness-50' width={1000} height={30} src={AboutUsImg} alt='Hero Image' />
-        <div className='gap-y-5 flex flex-col items-center justify-center text-center py-10 lg:px-20 md:px-10 xs:px-5 z-20 relative'>
-          <div className='flex flex-col items-center justify-center text-center'>
+        <div className='gap-y-5 flex flex-col xs:px-5 z-20 relative h-full justify-center'>
+          <div className='flex flex-col'>
             <p className='font-bold text-[20px] text-[#F5F5F5] dark:text-white'>Empower</p>
             <AnimatedLettersWhite text='Make a Difference' />
           </div>
-          <div className='flex flex-col items-center justify-center'>
-            <p className='lg:text-[18px] xs:text-[14px] text-[#F5F5F5] dark:text-[#d3d3d3]'>
-              Join us in empowering children in Africa by getting involved today.
-            </p>
-            <div className='flex gap-x-5 items-center mt-5'>
-            <Link href={''} className='w-[120px] h-[50px] flex items-center justify-center text-[18px] text-white bg-[#000] transition duration-300 ease-in-out gap-x-2'>
-              <BiSolidDonateHeart />
-              <p className='font-bold text-[20px] text-[#fff]'>Donate</p>
-            </Link>
-              <Link href={'/contact'} className='w-[120px] h-[50px] flex items-center justify-center border-2 border-[#666666] cursor-pointer text-[#fff] dark:text-[#eee] hover:bg-[#000] hover:text-white font-semibold'>
-                Contact
-              </Link>
-            </div>
+          <div className='flex gap-x-5'>
+            <Link href={'/services'} className='button-learn px-4 py-2 text-[20px] text-white dark:text-white'>Learn More</Link>
           </div>
         </div>
       </div>
+
       <div className='flex xl:flex-row xs:flex-col pt-20 lg:px-20 md:px-10 xs:px-5 bg-white dark:bg-[#181c20]'>
         <AnimatedLetters text='Discover Multiple Ways to Make a Difference' />
       </div>

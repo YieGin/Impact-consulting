@@ -72,29 +72,17 @@ const Page = () => {
     <div className='bg-[#F5F5F5] font-Cairo dark:bg-[#11161b]'>
       <div className='w-full md:h-[700px] xs:h-[500px]'>
         <Image className='w-full md:h-[700px] xs:h-[500px] object-cover absolute filter brightness-50' width={1000} height={30} src={AboutUsImg} alt='Hero Image' />
-        <div className='gap-y-5 flex flex-col items-center justify-center text-center py-10 lg:px-20 md:px-10 xs:px-5 z-20 relative'>
-          <div className='flex flex-col items-center justify-center text-center'>
+        <div className='gap-y-5 flex flex-col xs:px-5 z-20 relative h-full justify-center'>
+          <div className='flex flex-col'>
             <p className='font-bold text-[20px] text-[#F5F5F5] dark:text-white'>Empower</p>
             <AnimatedLettersWhite text='Transforming Lives Together' />
           </div>
-          <div className='flex flex-col items-center justify-center'>
-            <p className='lg:text-[18px] xs:text-[14px] text-[#F5F5F5] dark:text-[#d3d3d3]'>
-              Your donation can make a difference in the lives of children in Africa who need help.
-            </p>
-            <div className='flex gap-x-5 items-center mt-5'>
-            <Link href={'/donate'} className='w-[120px] h-[50px] flex items-center justify-center text-[18px] text-white bg-[#000] transition duration-300 ease-in-out gap-x-2'>
-              <BiSolidDonateHeart />
-              <p className='font-bold text-[20px] text-[#fff]'>Donate</p>
-            </Link>
-              <Link 
-                href={'/contact'} 
-                className='w-[120px] h-[50px] flex items-center justify-center border-2 border-[#666666] cursor-pointer text-[#fff] dark:text-[#eee] hover:bg-[#000] hover:text-white font-semibold'>
-                Contact
-              </Link>
-            </div>
+          <div className='flex gap-x-5'>
+            <Link href={'/services'} className='button-learn px-4 py-2 text-[20px] text-white dark:text-white'>Learn More</Link>
           </div>
         </div>
       </div>
+
       <div className='flex flex-col pt-20 lg:px-20 md:px-10 xs:px-5 dark:bg-[#181c20]'>
         <p className='font-bold text-[20px] text-[#11142D] dark:text-white'>Latest</p>
         <AnimatedLetters text='Discover My Blog Posts' />
@@ -114,7 +102,7 @@ const Page = () => {
               <div className='flex justify-between mt-auto'>
                 <Link target='_blank' href={item.href} className='read_button'>
                   <p className='dark:text-[#fff]'>Read more</p>
-                  <IoIosArrowForward className='font-bold text-[18px]' />
+                  <IoIosArrowForward className='font-bold text-[18px] dark:text-white' />
                 </Link>
                 <Link href={'/contact'} className='hire_button'>
                   <p className='dark:text-[#fff]'>Hire me</p>

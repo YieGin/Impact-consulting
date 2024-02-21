@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Impact consulting',
-  description: 'Impact consulting for nonprofit organization for kids in africa that need help',
+  description: 'Impact consulting for kids in africa that need help',
 }
 axios.defaults.withCredentials = true;
 export default function RootLayout({

@@ -4,10 +4,9 @@ import { AboutUsImg, Diana, Image19, Image20, Image21, Image22, Image23, Image24
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
-import { BiSolidDonateHeart } from 'react-icons/bi';
 import { motion } from 'framer-motion';
-import AnimatedLetters from './AnimatedLetters';
 import AnimatedLettersWhite from '../blog/AnimatedLetters'
+import AnimatedLettersTitle from '../blog/AnimatedLettersTitle';
 
 type SectionProps = {
   buttonText1?: string;
@@ -19,14 +18,10 @@ type SectionProps = {
   description?: string;
 };
 
-interface AnimatedLettersProps {
-  text: string;
-}
-
 const sections = [
   {
     title: "How I Became a Nonprofit Development Consultant",
-    description: "As a mother of three and a passionate advocate for social development, my life took a pivotal turn when I moved to Sweden in 2015. It wasn't just a change of scenery; it was the start of a dream to make a real difference in the nonprofit sector. I decided to refresh and expand my knowledge in the humanities and social sciences, leading me to a unique and unexpected field of study for my Master's Degree: Holocaust and Genocide Studies. This program wasn't just about understanding facts; it was a deep dive into the human aspects of violence, its causes, and far-reaching impacts. It equipped me with a profound understanding of the challenges faced by populations living in adverse conditions, shaping my approach to helping those in need.",
+    description: "You're passionate about your cause, and I'm here to amplify that passion. Think of me as a partner who brings a toolbox of specialized services designed to make your work easier and more impactful. From clear-cut strategies to streamlined operations, I'm all about taking the heavy lifting off your shoulders. Why? So you can focus on what you do best: creating real, lasting change in your community. Let's turn your vision into powerful actions that resonate far and wide.",
     imgSrc: Diana,
     imgAlt: "Supporting Image",
     linkText: "Get in Touch",
@@ -95,13 +90,6 @@ const sectionsContent = [
   },
 ];
 
-const ButtonGroup:React.FC<SectionProps> = ({ buttonText1, link1 }) => (
-  <Link href={link1} className='w-[120px] h-[50px] flex items-center justify-center text-[18px] text-white bg-[#000] transition duration-300 ease-in-out gap-x-2'>
-    <BiSolidDonateHeart />
-    <p className='font-bold text-[18px] text-[#fff]'>{buttonText1}</p>
-  </Link>
-);
-
 const TextSection:React.FC<SectionProps> = ({ title, description }) => (
   <div>
     <h1 className='font-bold text-[#11142D] dark:text-white md:text-[20px] lg:text-[26px]'>{title}</h1>
@@ -123,22 +111,13 @@ const Services = () => {
     <div className='dark:bg-[#181c20] bg-[#F5F5F5] font-Roboto'>
       <div className='w-full md:h-[700px] xs:h-[500px]'>
         <Image className='w-full md:h-[700px] xs:h-[500px] object-cover absolute filter brightness-50' width={1000} height={30} src={AboutUsImg} alt='Hero Image' />
-        <div className='gap-y-5 flex flex-col items-center justify-center text-center py-10 lg:px-20 md:px-10 xs:px-5 z-20 relative'>
-          <div className='flex flex-col items-center justify-center text-center'>
+        <div className='gap-y-5 flex flex-col xs:px-5 z-20 relative h-full justify-center'>
+          <div className='flex flex-col'>
             <p className='font-bold text-[20px] text-[#F5F5F5] dark:text-white'>Empower</p>
             <AnimatedLettersWhite text='Transforming Lives Together' />
           </div>
-          <div className='flex flex-col items-center justify-center'>
-            <p className='lg:text-[18px] xs:text-[14px] text-[#F5F5F5] dark:text-[#d3d3d3] lg:w-1/2'>
-              At my nonprofit organization, we are dedicated to empowering children in Africa to create a brighter future. Through education,
-              healthcare, and community support, we aim to transform lives and make a lasting impact.
-            </p>
-            <div className='flex gap-x-5 items-center mt-5'>
-              <ButtonGroup buttonText1="Donate" link1="/donate" />
-              <Link href="/contact" className='w-[120px] h-[50px] flex items-center justify-center border-2 border-[#666666] cursor-pointer text-[#fff] dark:text-[#eee] hover:bg-[#000] hover:text-white font-semibold'>
-                Get in Touch
-              </Link>
-            </div>
+          <div className='flex gap-x-5'>
+            <Link href={'/services'} className='button-learn px-4 py-2 text-[20px] text-white dark:text-white'>Learn More</Link>
           </div>
         </div>
       </div>
@@ -148,7 +127,7 @@ const Services = () => {
         {sections.map((section, index) => (
           <div 
             key={index}
-            className={`flex ${section.position === "right" ? "flex-row" : "flex-row-reverse"} gap-x-20 gap-y-5 overflow-hidden xs:flex-wrap-reverse lg:flex-nowrap lg:px-10 xl:px-20 md:px-10 xs:px-2`}
+            className={`flex ${section.position === "right" ? "flex-row" : "flex-row-reverse"} gap-x-10 gap-y-5 overflow-hidden xs:flex-wrap-reverse lg:flex-nowrap lg:px-10 xl:px-20 md:px-10 xs:px-2`}
             >
             <motion.div
               variants={fadeInVariant}
@@ -158,7 +137,7 @@ const Services = () => {
               className='lg:w-1/2'
             >
               <p className='font-bold md:text-[20px] xs:text-[16px] text-[#11142D] dark:text-white'>Empower</p>
-              <AnimatedLetters text={section.title} />
+              <AnimatedLettersTitle text={section.title} />
               <p className='font-Roboto xs:text-[14px] md:text-[16px] text-[#222] dark:text-[#eee] md:my-5 xs:mb-3'>{section.description}</p>
               <div className='flex flex-col gap-y-5'>
                 <TextSection
@@ -171,7 +150,7 @@ const Services = () => {
                 />
               </div>
               <div className='flex gap-x-5 items-center mt-5'>
-                <ButtonGroup buttonText1="Donate" link1={'/donate'} />
+
                 <Link href={section.linkHref} className='w-[120px] h-[50px] flex items-center justify-center border-2 border-[#666666] cursor-pointer text-[#000] dark:text-[#eee] hover:bg-[#000] hover:text-white font-semibold'>
                   {section.linkText}
                 </Link>
@@ -200,7 +179,7 @@ const Services = () => {
               className='lg:w-1/2'
             >
               <p className='font-bold md:text-[20px] text-[#11142D] dark:text-white'>Empower</p>
-              <AnimatedLetters text={section.title} />
+              <AnimatedLettersTitle text={section.title} />
               <p className='font-Roboto xs:text-[14px] md:text-[16px] text-[#222] dark:text-[#eee] md:my-5 xs:mb-3'>{section.description}</p>
               <div className='flex flex-col gap-y-5'>
                 <TextSection
@@ -213,7 +192,6 @@ const Services = () => {
                 />
               </div>
               <div className='flex gap-x-5 items-center mt-5'>
-                <ButtonGroup buttonText1="Donate" link1={'/donate'} />
                 <Link href={section.linkHref} className='w-[120px] h-[50px] flex items-center justify-center border-2 border-[#666666] cursor-pointer text-[#000] dark:text-[#eee] hover:bg-[#000] hover:text-white font-semibold'>
                   {section.linkText}
                 </Link>
@@ -242,7 +220,7 @@ const Services = () => {
               className='lg:w-1/2'
             >
               <p className='font-bold md:text-[20px] text-[#11142D] dark:text-white'>Empower</p>
-              <AnimatedLetters text={section.title} />
+              <AnimatedLettersTitle text={section.title} />
               <p className='font-Roboto xs:text-[14px] md:text-[16px] text-[#222] dark:text-[#eee] md:my-5 xs:mb-3'>{section.description}</p>
               <div className='flex flex-col gap-y-5'>
                 <TextSection
@@ -255,7 +233,6 @@ const Services = () => {
                 />
               </div>
               <div className='flex gap-x-5 items-center mt-5'>
-                <ButtonGroup buttonText1="Donate" link1={'/donate'} />
                 <Link href={section.linkHref} className='w-[120px] h-[50px] flex items-center justify-center border-2 border-[#666666] cursor-pointer text-[#000] dark:text-[#eee] hover:bg-[#000] hover:text-white font-semibold'>
                   {section.linkText}
                 </Link>

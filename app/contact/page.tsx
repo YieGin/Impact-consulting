@@ -1,6 +1,6 @@
 import React from 'react'
-import ContactForm from '../donate/ContactForm'
 import { Faq, Involved } from '@/components/common/LandingPage'
+import ContactForm from '../campaign/ContactForm'
 
 const Contact = () => {
   return (

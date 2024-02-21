@@ -15,9 +15,9 @@ const TermsAndConditions: React.FC = () => {
       <div>
         <h1 className='font-bold text-[#2F4F4F] dark:text-white md:text-[26px]'>Privacy Statement</h1>
         <div className='font-Roboto mt-2 md:text-[17px] lg:text-[15px] xl:text-[16px] xs:text-[14px] text-[#222] dark:text-[#eee] leading-7'>
-          a nonprofit organization dedicated to supporting children in Africa through various services including
+          Impact Consulting dedicated to supporting children in Africa through various services including
           <div className='flex flex-wrap'>
-            <Link className='text-teal-600 underline mr-1' href={'/donate'}>Donate</Link>, 
+            <Link className='text-teal-600 underline mr-1' href={'/pro-bono'}>Pro bono</Link>, 
             <Link className='text-teal-600 underline mx-1' href={'/volunteer'}>Volunteer</Link>,
             <Link className='text-teal-600 underline mx-1' href={'/services'}>Services</Link>,
             <Link className='text-teal-600 underline mx-1' href={'/certificates'}>Certificates</Link>,
