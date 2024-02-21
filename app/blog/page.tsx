@@ -39,31 +39,31 @@ const Page = () => {
     {
       title: 'I Learned Swedish in a Room Full of Refugees',
       description: 'For me, Sweden was an organized country with tranquil cities and villages surrounded by lakes, and dense forests, offering a strong education and health system. The country used to take in around twenty to forty thousand immigrants yearly. A number they were prepared for. But in 2015, the number skyrocketed to over 160,000. Among them were Syrians, Eritreans, Somalis, South Sudanese, South Americans, and many from Asia, all seeking refuge from the turmoil in their homelands.',
-      href: 'https://medium.com/better-humans/how-being-unrealistic-can-guide-you-through-lifes-challenges-058807d4378b',
+      href: 'https://medium.com/ellemeno/i-learned-swedish-in-a-room-full-of-refugees-a3bbbb22b996',
       Image: Image26
     },
     {
       title: 'Here’s How Reading Fiction Can Improve Your Life',
       description: 'How can a fairytale overthrow a political party in power for 40 years? Often, people might find themselves in a situation they have disliked for years but perceive they cannot change it. Worse, they get used to it. Suddenly, a story written by a famous author reflects their situation. It triggers their thoughts, and their reaction becomes viral.',
-      href: 'https://medium.com/better-humans/how-being-unrealistic-can-guide-you-through-lifes-challenges-058807d4378b',
+      href: 'https://betterhumans.pub/6-ways-fiction-can-improve-your-life-97e2803194ea',
       Image: Image27
     },
     {
       title: 'Survivors’ Tales Illuminate My Path to Renewal',
       description: 'Courage is daring to break the chains. And, there are so many… in our minds—breakaway for the sake of love for yourself and others, and dare to make the world a better place. Break the Chains and Make the World a Better Place.',
-      href: 'https://medium.com/the-creative-pen/why-nonprofits-should-adopt-positive-education-abe0d755b81a',
+      href: 'https://medium.com/garden-of-neuro/survivors-tales-and-my-path-to-renewal-f5bb12581cb6',
       Image: Image28
     },
     {
-      title: '5 Steps to Develop Personal Agency: Take Control',
-      description: 'Sitting face-to-face with people who’ve stared down the darkest corners of human experience changes you. I found myself in such a moment when interviewing survivors for my research. A large group of university students and young professionals faced a harrowing ordeal. Denounced as ‘Nitistas,’ supporters of Nito Alves were seen as creating divisions within the ruling party and trying to undermine its authority and control. A sudden purge,',
-      href: 'https://medium.com/the-creative-pen/why-nonprofits-should-adopt-positive-education-abe0d755b81a',
+      title: '5 Steps To Change Your Circumstances',
+      description: 'Are you stuck in a situation that you want to change but feel hopeless? People often face stress that overwhelms them, such as conflicts, frustrations, setbacks, and injustices in various aspects of their lives. Sooner or later, we all experience the downsides of life and must deal with them within our human limitations. But here’s some good news: research shows that you can challenge your circumstances as long as you believe in your ability to do so, regardless of your situation.',
+      href: 'https://medium.com/illumination/5-steps-to-change-your-circumstances-95e61d8c88ff',
       Image: Image15
     },
     {
       title: 'How to Finally Move On from Past Hurts',
       description: 'How can you release the grip of pain and move forward on your path to personal growth and fulfilment? In the tapestry of our lives, the weight of past hurts can cast a shadow on our present moments. Yet, within us lies the resilience to heal and find liberation. So, I invite you to embark on a transformative journey of self-discovery, self-compassion, and resilience.',
-      href: 'https://medium.com/the-creative-pen/why-nonprofits-should-adopt-positive-education-abe0d755b81a',
+      href: 'https://betterhumans.pub/how-to-finally-move-on-from-past-hurts-8f0a6f686649',
       Image: Image18
     },
   ]
