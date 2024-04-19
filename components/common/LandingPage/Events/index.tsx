@@ -59,7 +59,7 @@ const Events = () => {
             variants={itemVariants}
             initial="offscreen"
             whileInView="onscreen"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2  }}
             custom={index}
           >
             <Image className='w-full h-[300px] object-cover' width={4000} height={3000} src={item.Image} alt={`event image ${index}`} />

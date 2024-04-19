@@ -1,26 +1,11 @@
 'use client'
 import AnimatedLetters from '@/app/services/AnimatedLetters';
-import { HeroImage, Image29, Image30 } from '@/public/images';
+import { HeroImage } from '@/public/images';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
 
-const heroImages = [
-  { src: HeroImage, alt: 'Hero Image 1' },
-  { src: Image29, alt: 'Hero Image 2' },
-  { src: Image30, alt: 'Hero Image 3' },
-];
 
 const HeroPage = () => {
-  const [currentImage, setCurrentImage] = useState(0);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentImage((prevImage) => (prevImage + 1) % heroImages.length);
-    }, 3000);
-
-    return () => clearInterval(intervalId);
-  }, []);
 
   return (
     <div className="flex font-Cairo dark:bg-[#11161b]">
@@ -37,9 +22,8 @@ const HeroPage = () => {
         className='lg:w-1/2 h-screen object-cover'
         width={4000}
         height={3000}
-        src={heroImages[currentImage].src}
-        alt={heroImages[currentImage].alt}
-        key={currentImage}
+        src={HeroImage}
+        alt={"Hero Image"}
       />
     </div>
   );
